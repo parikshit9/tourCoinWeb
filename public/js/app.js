@@ -15,14 +15,13 @@ worldTourApp.config(function($httpProvider, $stateProvider, $urlRouterProvider, 
 
     //Remove the header used to identify ajax call  that would prevent CORS from working
     // delete $httpProvider.defaults.headers.common['X-Requested-With'];
-    console.log(angular,"yay");
     $urlRouterProvider.otherwise('/');
     $stateProvider
         .state("home", {
             url: "/",
-            templateUrl: "/views/home",
+            templateUrl: "/views/home.html",
             controller: "wtoController"
         })
 
-    // $locationProvider.html5Mode(false);
+    $locationProvider.html5Mode(true);
 });
