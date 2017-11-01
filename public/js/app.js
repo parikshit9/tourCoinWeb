@@ -1,6 +1,6 @@
 'use strict';
 
-var worldTourApp = angular.module('worldTourApp', ['ui.router', 'ngRoute']);
+var worldTourApp = angular.module('worldTourApp', ['ui.router', 'ngRoute', 'chart.js']);
 
 worldTourApp.config(function($httpProvider, $stateProvider, $urlRouterProvider, $locationProvider) {
     // $locationProvider.html5Mode({
@@ -25,3 +25,15 @@ worldTourApp.config(function($httpProvider, $stateProvider, $urlRouterProvider, 
 
     $locationProvider.html5Mode(true);
 });
+
+worldTourApp.config(['ChartJsProvider', function (ChartJsProvider) {
+// Configure all charts
+    ChartJsProvider.setOptions({
+        chartColors: ['#05e7e6', '#FFFFFF'],
+        responsive: false
+    });
+    // Configure all line charts
+    ChartJsProvider.setOptions('line', {
+        showLines: false
+    });
+}])

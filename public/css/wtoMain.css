@@ -21,7 +21,9 @@ html,body {
 }
 
 /*custom margin*/
-
+.topgap50{
+	margin-top: 50px;
+}
 .topgap40{
 	margin-top: 40px;
 }
@@ -168,6 +170,9 @@ html,body {
 .relative{
 	position: relative;
 }
+.middle{
+	vertical-align: middle;
+}
 
 .wto-container{
 	padding: 0!important;
@@ -263,4 +268,79 @@ input:focus{
 	letter-spacing: 10px;
 	text-align: center;
 	color: #ffffff;
+}
+.download-whitepaper{
+	display: inline-block;
+	width:330px;
+	height: 45px;
+	border-radius: 100px;
+	border: solid 1px #ffffff;
+	color: #fff;
+	font-size: 12px;
+	font-weight: bold;
+	letter-spacing: 2.4px;
+	padding: 12px 35px;
+	text-align: center;
+	margin-right: 20px;
+}
+.join-ico{
+	display: inline-block;
+	width:330px;
+	height: 45px;
+	border-radius: 100px;
+	background-color: #05e7e6;
+	color: #fff;
+	font-size: 12px;
+	font-weight: bold;
+	letter-spacing: 2.4px;
+	padding: 13px 35px;
+	text-align: left;
+	vertical-align: middle;
+	position: relative;
+	margin-left: 20px;
+}
+.ico-arrow{
+	width: 50px;
+	height: 28px;
+	border-radius: 99px;
+	background-color: #2e3c56;
+	text-align: right;
+	display: inline-block;
+	padding: 3px 10px;
+	vertical-align: middle;
+	position: absolute;
+	right: 35px;
+	top: 50%;
+	transform: translateY(-50%);
+}
+.core-text-container{
+	font-size: 14px;
+	font-weight: 300;
+	line-height: 1.57;
+	text-align: center;
+	color: #7f848b;
+}
+.core-img-container{
+	width: 72px;
+	height: 72px;
+	display: inline-block;
+	background-image: linear-gradient(to bottom, #05e7e6, #50e3c2);
+	border-radius: 50%;
+}
+.core-head-title{
+	font-size: 12px;
+	font-weight: bold;
+	letter-spacing: 2.4px;
+	text-align: center;
+	color: #212121;
+}
+
+/*(for small screen size less then 480px)*/
+@media only screen and (max-width: 480px){
+		
+}
+
+/*(for bigger screen size mobile and tablets less then 768px)*/
+@media only screen and (max-width: 768px){
+	
 }
