@@ -1,5 +1,43 @@
+@font-face {
+    font-family: Montserrat;
+    font-weight: normal;
+    src: url("/fonts/Montserrat-Regular.otf") format("opentype");
+}
+
+@font-face {
+    font-family: Montserrat;
+    font-weight: 600;
+    src: url("/fonts/Montserrat-Bold.otf") format("opentype");
+}
+
+@font-face {
+    font-family: Montserrat;
+    font-weight: 500;
+    src: url("/fonts/Montserrat-SemiBold.otf") format("opentype");
+}
+
+@font-face {
+    font-family: Montserrat;
+    font-weight: 400;
+    src: url("/fonts/Montserrat-Light.otf") format("opentype");
+}
+
+@font-face {
+    font-family: Montserrat;
+    font-weight: 300;
+    src: url("/fonts/Montserrat-Light.otf") format("opentype");
+}
+
+@font-face {
+    font-family: Montserrat;
+    font-weight: 100;
+    src: url("/fonts/Montserrat-ExtraLight.otf") format("opentype");
+}
+
 html,body {
-    font-size-adjust: 0.5 !important;
+	font-family: Montserrat!important;
+	-webkit-font-smoothing: antialiased;
+	font-size-adjust: 0.5 !important;
 }
 
 /*custom padding*/
@@ -21,6 +59,9 @@ html,body {
 }
 
 /*custom margin*/
+.topgap60{
+	margin-top: 60px;
+}
 .topgap50{
 	margin-top: 50px;
 }
@@ -65,6 +106,9 @@ html,body {
 }
 .bottomgap6{
 	margin-bottom: 6px;
+}
+.leftgap30{
+	margin-left: 30px;
 }
 .leftgap20{
 	margin-left: 20px;
@@ -173,7 +217,30 @@ html,body {
 .middle{
 	vertical-align: middle;
 }
-
+.label-blue{
+	color: #0ebac5;
+}
+.label-grey{
+	color: #4a4a4a;
+}
+.label-light-grey{
+	color: #9b9b9b;
+}
+video { 
+	position: absolute;
+	top: 50%;
+	left: 50%;
+	min-width: 100%;
+	min-height: 100%;
+	width: auto;
+	height: auto;
+	z-index: -100;
+	transform: translateX(-50%) translateY(-50%);
+	background: url('//demosthenes.info/assets/images/polina.jpg') no-repeat;
+	background-size: cover;
+	transition: 1s opacity;
+	background-repeat: no-repeat;
+}
 .wto-container{
 	padding: 0!important;
 	margin: auto 0!important;
@@ -182,9 +249,9 @@ html,body {
 }
 .wto-home-bg{
 	min-height: 100vh!important;
-	background-image: url('/img/world-map.jpg');
+	/*background-image: url('/img/world-map.jpg');
 	background-size: cover;
-	background-repeat: no-repeat;
+	background-repeat: no-repeat;*/
 }
 .wto-home-span{
 	font-size:24px;
@@ -333,10 +400,121 @@ input:focus{
 	letter-spacing: 2.4px;
 	text-align: center;
 	color: #212121;
+	word-wrap: break-word;
 }
-
+.wto-distribution-title{
+	font-size: 30px;
+	letter-spacing: -0.2px;
+	text-align: center;
+	color: #485465;
+}
+.app-soon{
+	font-size: 64px;
+	font-weight: 300;
+	line-height: 0.75;
+	text-align: left;
+	color: #4a4a4a;
+}
+.wto-grey-bg{
+	background-color: #faf9fe;
+	min-height: 100px;
+}
+.global-players{
+	font-size: 30px;
+	font-weight: 300;
+	line-height: 1.6;
+	text-align: center;
+	color: #4a4a4a;
+}
+.brand-imgs img{
+	width: 15%;
+	height: auto;
+}
+.wto-footer-row{
+	background-color: #fff;
+	border-top:2px solid #e8e9ed;
+	border-bottom:2px solid #e8e9ed;
+}
+.social-container{
+	padding: 30px 0;
+	border-bottom: 1px solid #e8e9ed;
+}
+.vac-container{
+	padding: 15px 0;
+}
+.parallax-container{
+	height: 200px;
+}
+.social-leftgap{
+	margin-left: 30px;
+}
 /*(for small screen size less then 480px)*/
 @media only screen and (max-width: 480px){
+	.wto-home-span{
+		font-size:16px;
+	}
+	.wto-journey-text{
+		font-size: 10px;
+		letter-spacing: 8px;
+	}
+	.logo{
+		width: 48px;
+		height: 47px;
+		object-fit: contain;
+		margin: 0 10px 0 10px;
+	    display: inline-block;
+	    vertical-align: middle;
+	}
+	.background-xs{
+		position: absolute;
+		top: 50%;
+		left: 50%;
+		min-width: 100%;
+		min-height: 100%;
+		z-index: -100;
+		transform: translateX(-50%) translateY(-50%);
+		background-image: url('/img/ny.jpg');
+		background-size: cover;
+		height: 100vh;
+		width: 100%;
+		background-repeat: no-repeat;
+	}
+	.wto-frame{
+		width: 100%;
+		height: auto;
+	}
+	.wto-frame-text{
+		top: 45%;
+		left: 50%;
+		transform: translate(-50%,-50%);
+		font-size: 16px;
+		font-weight: 100;
+		text-align: center;
+		color: #fff;
+		width: 100%;
+	}
+	.wto-mail-sub{
+		width: 200px!important;
+	}
+	.join-ico{
+		margin-left: 0px;
+		margin-top: 20px;
+	}
+	.download-whitepaper{
+		margin-right: 0px;
+	}
+	.parallax-container{
+		height: 240px;
+	}
+	.app-soon{
+		font-size: 48px;
+	}
+	.global-players{
+		font-size: 20px;
+	}
+	.social-leftgap{
+		margin-left: 20px;
+	}
 		
 }
 

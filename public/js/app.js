@@ -29,7 +29,7 @@ worldTourApp.config(function($httpProvider, $stateProvider, $urlRouterProvider, 
 worldTourApp.config(['ChartJsProvider', function (ChartJsProvider) {
 // Configure all charts
     ChartJsProvider.setOptions({
-        chartColors: ['#05e7e6', '#FFFFFF'],
+        chartColors: ["#204f84","#53a8e2","#50e3c2","#dbecf8"],
         responsive: false
     });
     // Configure all line charts
