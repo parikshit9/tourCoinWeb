@@ -92,6 +92,9 @@ html,body {
 .topgap6{
 	margin-top: 6px;
 }
+.bottomgap40{
+	margin-bottom: 40px;
+}
 .bottomgap30{
 	margin-bottom: 30px;
 }
@@ -318,7 +321,7 @@ video {
 	font-weight: 600;
 	text-align: center;
 	color: #2e3c56;
-	top: 0;
+	top: -1px;
 	padding: 0.4%;
 }
 input:focus{
@@ -373,7 +376,7 @@ input:focus{
 	background-color: #2e3c56;
 	text-align: right;
 	display: inline-block;
-	padding: 3px 10px;
+	padding: 4px 8px;
 	vertical-align: middle;
 	position: absolute;
 	right: 35px;
@@ -448,6 +451,16 @@ input:focus{
 .social-leftgap{
 	margin-left: 30px;
 }
+.visible-xs-only{
+	display: none;
+}
+
+/*materiaze override*/
+#toast-container{
+	bottom:1%!important;
+	right: 1%!important;
+	top: auto!important;
+}
 /*(for small screen size less then 480px)*/
 @media only screen and (max-width: 480px){
 	.wto-home-span{
@@ -515,7 +528,15 @@ input:focus{
 	.social-leftgap{
 		margin-left: 20px;
 	}
-		
+	.mail-subscribe{
+		padding: 1%;
+	}
+	.center-xs{
+		text-align: center;
+	}
+	.visible-xs-only{
+		display: block;
+	}
 }
 
 /*(for bigger screen size mobile and tablets less then 768px)*/
