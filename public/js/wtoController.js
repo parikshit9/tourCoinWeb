@@ -1,5 +1,4 @@
 worldTourApp.controller('wtoController', function($scope, $rootScope, $state, $timeout, $sce, $http, $window) {
-	console.log("controller");
 
 	$(document).ready(function(){
       $('.parallax').parallax();
@@ -21,6 +20,8 @@ worldTourApp.controller('wtoController', function($scope, $rootScope, $state, $t
 			if (res.data.subscriptionStatus) {
 				Materialize.toast('Subscribed Succesfully!', 4000);
 				$scope.mailId = null;
+			}else if(res.data.Error){
+				Materialize.toast('Mail Id Already Subscribed!', 4000);
 			}
 		}
 

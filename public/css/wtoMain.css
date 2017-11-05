@@ -25,13 +25,13 @@
 @font-face {
     font-family: Montserrat;
     font-weight: 300;
-    src: url("/fonts/Montserrat-Light.otf") format("opentype");
+    src: url("/fonts/Montserrat-ExtraLight.otf") format("opentype");
 }
 
 @font-face {
     font-family: Montserrat;
     font-weight: 100;
-    src: url("/fonts/Montserrat-ExtraLight.otf") format("opentype");
+    src: url("/fonts/Montserrat-Thin.otf") format("opentype");
 }
 
 html,body {
@@ -86,8 +86,8 @@ html,body {
 .topgap15{
 	margin-top: 15px;
 }
-.topgap8{
-  margin-top: 8px;
+.topgap10{
+  margin-top: 10px;
 }
 .topgap6{
 	margin-top: 6px;
@@ -115,6 +115,9 @@ html,body {
 }
 .leftgap20{
 	margin-left: 20px;
+}
+.leftgap15{
+	margin-left: 15px;
 }
 .leftgap12{
 	margin-left: 12px;
@@ -271,7 +274,7 @@ video {
 	letter-spacing: 10px;
 	text-align: center;
 	color: #05e7e6;
-	text-shadow: 0 0 10px #0b1b33;
+	/*text-shadow: 0 0 10px #0b1b33;*/
 }
 .logo{
 	width: 78px;
@@ -280,6 +283,10 @@ video {
 	margin: 0 20px 0 20px;
     display: inline-block;
     vertical-align: middle;
+}
+.wto-frame{
+	width: 47%;
+	height: auto;
 }
 .wto-frame-text{
 	position: absolute;
@@ -307,12 +314,12 @@ video {
 .mail-icon{
 	position: absolute;
     left: 20px;
-    top: 3px;
+    top: 5px;
 }
 .mail-subscribe{
 	cursor: pointer;
 	position: absolute;
-	right: 20px;
+	right: 12px;
 	width: 90px;
 	height: 24px;
 	border-radius: 100px;
@@ -322,7 +329,45 @@ video {
 	text-align: center;
 	color: #2e3c56;
 	top: -1px;
-	padding: 0.4%;
+	/*padding: 0.4%;*/
+	display: flex;
+	align-items: center;
+	justify-content: center;
+}
+.wto-news-sub{
+	width: 450px!important;
+	height: 45px!important;
+	border-radius: 100px!important;
+	background-color: #fafafa!important;
+	border: solid 2px #eaeaea!important;
+	padding: 0px 115px 0px 45px!important;
+	color: #7f848b!important;
+	margin: 0!important;
+	position: relative!important;
+	font-size: 14px!important;
+}
+.news-icon{
+	position: absolute;
+    left: 20px;
+    top: 4px;
+}
+.news-subscribe{
+	cursor: pointer;
+	position: absolute;
+	right: 12px;
+	width: 90px;
+	height: 24px;
+	border-radius: 100px;
+	background-color: #05e7e6;
+	font-size: 10px;
+	font-weight: 600;
+	text-align: center;
+	color: #fff;
+	top: -1px;
+	/*padding: 0.4%;*/
+	display: flex;
+	align-items: center;
+	justify-content: center;
 }
 input:focus{
 	outline: none!important;
@@ -379,7 +424,7 @@ input:focus{
 	padding: 4px 8px;
 	vertical-align: middle;
 	position: absolute;
-	right: 35px;
+	right: 10px;
 	top: 50%;
 	transform: translateY(-50%);
 }
@@ -509,6 +554,9 @@ input:focus{
 	.wto-mail-sub{
 		width: 200px!important;
 	}
+	.wto-news-sub{
+		width: 200px!important;
+	}
 	.join-ico{
 		margin-left: 0px;
 		margin-top: 20px;
@@ -528,9 +576,9 @@ input:focus{
 	.social-leftgap{
 		margin-left: 20px;
 	}
-	.mail-subscribe{
+	/*.mail-subscribe{
 		padding: 1%;
-	}
+	}*/
 	.center-xs{
 		text-align: center;
 	}
