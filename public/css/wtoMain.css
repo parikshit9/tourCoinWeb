@@ -499,6 +499,9 @@ input:focus{
 .visible-xs-only{
 	display: none;
 }
+.wto-map-bg{
+	background-color: #191919;
+}
 
 /*materiaze override*/
 #toast-container{
@@ -575,6 +578,7 @@ input:focus{
 	}
 	.social-leftgap{
 		margin-left: 20px;
+		margin-top: 5px;
 	}
 	/*.mail-subscribe{
 		padding: 1%;
