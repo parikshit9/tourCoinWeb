@@ -232,6 +232,9 @@ html,body {
 .label-light-grey{
 	color: #9b9b9b;
 }
+.label-white{
+	color: #fff;
+}
 video { 
 	position: absolute;
 	top: 50%;
@@ -501,6 +504,122 @@ input:focus{
 }
 .wto-map-bg{
 	background-color: #191919;
+}
+.roadmap-bottom-container{
+	width: 100%;
+	text-align: center;
+	margin-top: 50px;
+	margin-bottom: 35px;
+}
+.map-bg-img{
+	background-image: url("/img/tcbg.png");
+	background-position: 50% 50%;
+	background-repeat: no-repeat;
+	padding-top: 40px;
+	padding-bottom: 40px;
+}
+.map-middle-border{
+	border-right: 2px dotted #fff;
+	position: absolute;
+	top: 48%;
+	left: 50%;
+	width: 1px;
+	transform: translate(-50%,-50%);
+	height: calc(100% - 400px);
+}
+.road-map-flex{
+	display: flex;
+	align-items: center;
+	margin-top: 85px;
+}
+.road-map-left-1{
+	font-size: 18px;
+	color: #fff;
+	text-align: right;
+	padding-right: 58px!important;
+}
+.road-map-right-1{
+	font-size: 12px;
+	color: #fff;
+	line-height: 1.5;
+	padding-right: 58px!important;
+	padding-left: 58px!important;
+}
+.road-map-left-2{
+	font-size: 12px;
+	color: #fff;
+	line-height: 1.5;
+	padding-right: 58px!important;
+	padding-left: 58px!important;
+}
+.road-map-right-2{
+	font-size: 18px;
+	color: #fff;
+	text-align: left;
+	padding-left: 58px!important;
+}
+
+/*map pointer*/
+.map-pointer-layer4{
+	position: absolute;
+	top: 50%;
+	left: 50%;
+	transform: translate(-50%,-50%);
+	height: 18px;
+	width: 18px;
+	background-color: #05e7e6;
+	display: inline-block;
+	border-radius: 50%;
+	/*border:2px solid #0f2238;*/
+}
+.map-pointer-layer3{
+	position: absolute;
+	top: 50%;
+	left: 50%;
+	transform: translate(-50%,-50%);
+	height: 22px;
+	width: 22px;
+	background-color: #0f2238;
+	display: inline-block;
+	border-radius: 50%;
+	/*border:2px solid #0f2238;*/
+}
+.map-pointer-layer2{
+	position: absolute;
+	top: 50%;
+	left: 50%;
+	height: 26px;
+	width: 26px;
+	transform: translate(-50%,-50%);
+	display: inline-block;
+	border-radius: 50%;
+	/*border:2px solid #fff;*/
+	background-color: #fff;
+}
+.map-pointer-layer1{
+	position: absolute;
+	top: 50%;
+	left: 50%;
+	height: 30px;
+	width: 30px;
+	transform: translate(-50%,-50%);
+	display: inline-block;
+	border-radius: 50%;
+	/*border:2px solid #0f2238;*/
+	background-color: #0f2238;
+}
+.map-pointer-container{
+	display: inline-block;
+	border-radius: 50%;
+	/*border:2px solid #4b5969;*/
+	background-color: #4b5969;
+	position: absolute;
+	top: 50%;
+	left: 50%;
+	height: 34px;
+	width: 34px;
+	transform: translate(-50%,-50%);
+	z-index: 2;
 }
 
 /*materiaze override*/
