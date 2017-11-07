@@ -1,6 +1,7 @@
 {
   "name": "starter-node-angular",
   "main": "server.js",
+  "private": true,
   "dependencies": {
     "body-parser": "~1.4.2",
     "express": "~4.5.1",
