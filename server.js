@@ -7,6 +7,7 @@ var http = require('http');
 var https = require('https');
 var privateKey  = fs.readFileSync('/home/ubuntu/ssl2/worldtourism.key', 'utf8');
 var certificate = fs.readFileSync('/home/ubuntu/ssl2/57755d0011fb26b6.crt', 'utf8');
+var forceSsl = require('express-force-ssl');
 
 var credentials = {key: privateKey, cert: certificate};
 
@@ -32,3 +33,4 @@ var httpServer = http.createServer(app);
 var httpsServer = https.createServer(credentials, app);
 httpServer.listen(80);
 httpsServer.listen(443);
+app.use(forceSsl);
