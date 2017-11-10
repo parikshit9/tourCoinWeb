@@ -89,6 +89,9 @@ html,body {
 .topgap10{
   margin-top: 10px;
 }
+.topgap8{
+	margin-top: 8px;
+}
 .topgap6{
 	margin-top: 6px;
 }
@@ -433,7 +436,7 @@ input:focus{
 }
 .core-text-container{
 	font-size: 14px;
-	font-weight: 300;
+	/*font-weight: 300;*/
 	line-height: 1.57;
 	text-align: center;
 	color: #7f848b;
@@ -621,7 +624,111 @@ input:focus{
 	transform: translate(-50%,-50%);
 	z-index: 2;
 }
-
+.distribution-pointer{
+	display: inline-block;
+	height: 9px;
+	width: 9px;
+	border-radius: 50%;
+}
+.distribution-label{
+	display: inline-block;
+	margin-left: 15px;
+	font-size: 14px;
+	font-weight: 300;
+	letter-spacing: -0.1px;
+	color: #485465;
+}
+.distributed-text{
+	font-size: 14px;
+	font-weight: 300;
+	letter-spacing: -0.1px;
+	text-align: left;
+	color: #485465;
+}
+.structural-container{
+	width: 19%;
+	display: inline-block;
+}
+.bonus-percent{
+	display: inline-block;
+	position: absolute;
+	top: calc(50% - 30px);
+	left: 50%;
+	transform: translate(-50%,-50%);
+	font-size: 20px;
+	font-weight: 600;
+	text-align: center;
+	color: #212121;
+}
+.bonus-title{
+	font-size: 12px;
+	font-weight: 500;
+	letter-spacing: 2.4px;
+	text-align: center;
+	color: #212121;
+	margin-top: 45px;
+}
+.rewards-sub{
+	font-size: 14px;
+	line-height: 1;
+	letter-spacing: -0.2px;
+	text-align: center;
+	color: #9b9b9b;
+}
+.reward-bottom-text{
+	font-size: 14px;
+	letter-spacing: -0.2px;
+	text-align: center;
+	color: #9b9b9b;
+	margin-top: 60px;
+	margin-bottom: 30px;
+}
+.wto-fixed-nav{
+	position: fixed;
+	top: 0;
+	left: 0;
+	width: 100%;
+	padding:0 15px;
+	z-index: 999;
+	display: flex;
+	max-height: 112px;
+	min-height: 112px;
+	box-shadow: none;
+	transition: 0.3s linear background-color;
+	align-items: center;
+	justify-content: center;
+}
+.wto-trans-nav{
+  background-color: transparent;
+  background-image: none;
+}
+.wto-white-nav{
+  background-color: #fff;
+  border: solid 1px #eaeaea;
+}
+.wto-nav-ul{
+	float: right;
+}
+.wto-anchor{
+	padding: 18px 24px;
+	line-height: initial;
+	opacity: 0.5;
+	font-family: Montserrat;
+	font-size: 12px;
+	font-weight: bold;
+	letter-spacing: 2.4px;
+	text-align: center;
+	color: #9b9b9b;
+	background-color: transparent!important;
+	background-image: none!important;
+	border-bottom: 3px solid #eaeaea;
+}
+.anchor-active{
+	border-color: #50e3c2;
+}
+.border-none{
+	border:none!important;
+}
 /*materiaze override*/
 #toast-container{
 	bottom:1%!important;
