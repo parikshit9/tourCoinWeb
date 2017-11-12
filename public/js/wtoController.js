@@ -1,7 +1,8 @@
 worldTourApp.controller('wtoController', function($scope, $rootScope, $state, $timeout, $sce, $http, $window) {
-
+	$scope.state = $state;
 	$(document).ready(function(){
 		$('.parallax').parallax();
+		$('.collapsible').collapsible();
 		$('.scrollspy').scrollSpy();
 		$('.scrollspy').on('scrollSpy:enter', function() {
 			$('.wto-fixed-nav').find('a').removeClass('anchor-active');

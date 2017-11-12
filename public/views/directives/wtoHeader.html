@@ -1,11 +1,31 @@
 <div class="wto-container">
-	<div class="row">
+	<div class="row" style="margin-bottom: 0;">
 		<nav scroll class="wto-fixed-nav {{boolChangeClass?'wto-white-nav':'wto-trans-nav'}}">
 			<div class="col s12">
 				<ul class="wto-nav-ul right">
-					<li><a class="wto-anchor {{boolChangeClass?'':'border-none'}}" href="#about">ABOUT US</a></li>
-					<li><a class="wto-anchor {{boolChangeClass?'':'border-none'}}" href="#road-map">ROAD MAP</a></li>
-					<li><a class="wto-anchor {{boolChangeClass?'':'border-none'}}" href="#distribution">ANALYTICS</a></li>
+					<li ng-if="state.current.name == 'home'">
+						<a class="wto-anchor {{boolChangeClass?'':'border-none'}}" href="#about">ABOUT US</a>
+					</li>
+					<li ng-if="state.current.name == 'home'">
+						<a class="wto-anchor {{boolChangeClass?'':'border-none'}}" href="#road-map">ROAD MAP</a>
+					</li>
+					<li ng-if="state.current.name == 'home'">
+						<a class="wto-anchor {{boolChangeClass?'':'border-none'}}" href="#distribution">ANALYTICS</a>
+					</li>
+
+					<li ng-if="state.current.name != 'home'">
+						<a class="wto-anchor {{boolChangeClass?'':'border-none'}}" ui-sref="home">ABOUT US</a>
+					</li>
+					<li ng-if="state.current.name != 'home'">
+						<a class="wto-anchor {{boolChangeClass?'':'border-none'}}" ui-sref="home">ROAD MAP</a>
+					</li>
+					<li ng-if="state.current.name != 'home'">
+						<a class="wto-anchor {{boolChangeClass?'':'border-none'}}" ui-sref="home">ANALYTICS</a>
+					</li>
+
+					<li>
+						<a class="wto-anchor {{boolChangeClass?'':'border-none'}} {{state.current.name == 'vision' ? 'anchor-active':''}}" ui-sref="vision">VISION</a>
+					</li>
 				</ul>
 			</div>
 		</nav>		

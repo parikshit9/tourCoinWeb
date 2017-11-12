@@ -143,7 +143,9 @@ html,body {
 .rightgap6{
 	margin-right: 6px;
 }
-
+.cursor{
+	cursor: pointer;
+}
 /*custom font css*/
 .font-10{
   font-size: 10px;
@@ -219,6 +221,12 @@ html,body {
 }
 .text-center{
 	text-align: center;
+}
+.text-right{
+	text-align: right;
+}
+.text-left{
+	text-align: left;
 }
 .relative{
 	position: relative;
@@ -691,8 +699,8 @@ input:focus{
 	padding:0 15px;
 	z-index: 999;
 	display: flex;
-	max-height: 112px;
-	min-height: 112px;
+	max-height: 80px;
+	min-height: 80px;
 	box-shadow: none;
 	transition: 0.3s linear background-color;
 	align-items: center;
@@ -710,7 +718,7 @@ input:focus{
 	float: right;
 }
 .wto-anchor{
-	padding: 18px 24px;
+	padding: 14px 24px;
 	line-height: initial;
 	opacity: 0.5;
 	font-family: Montserrat;
@@ -727,7 +735,161 @@ input:focus{
 	border-color: #50e3c2;
 }
 .border-none{
-	border:none!important;
+	border-color: transparent!important;
+}
+.our-vision{
+	font-size: 36px;
+	font-weight: 500;
+	line-height: 0.56;
+	text-align: left;
+	color: #05e7e6;
+}
+.vision-paragraph{
+	font-size: 13px;
+	font-weight: 300;
+	line-height: 1.69;
+	text-align: left;
+	color: #7f848b;
+	line-height: 1.85;
+}
+.vision-box-png{
+	position: absolute;
+	bottom: -35%;
+	right: 0;
+}
+.vision-icon{
+	position: absolute;
+	bottom: 190px;
+	right: 50px;
+}
+.vision-grid{
+	background-color: #ffffff;
+	box-shadow: 0 0 8px 0 rgba(0, 0, 0, 0.17);
+	padding:28px;
+	min-height: 340px;
+	margin-top: -30%;
+	margin-bottom: 20%;
+}
+.media-partner{
+	font-size: 20px;
+	font-weight: 300;
+	line-height: 2.4;
+	text-align: left;
+	color: #4a4a4a;
+	margin-right: 60px;
+	min-width: 152px;
+	height: 72px;
+	display: inline-block;
+}
+.crew-header{
+	background-image: url('/img/vision/crew.png');
+	background-repeat: no-repeat;
+	background-position: 50% 50%;
+	padding: 50px 0;
+}
+.crew-title{
+	font-size: 42px;
+	font-weight: 500;
+	line-height: 0.83;
+	letter-spacing: 5.3px;
+	text-align: center;
+	color: #2e3c56;
+}
+.crew-name{
+	font-size: 16px;
+	font-weight: bold;
+	line-height: 1.94;
+	letter-spacing: 3px;
+	text-align: center;
+	color: #2e3c56;
+	margin-top: 10px;
+}
+.crew-designation{
+	font-size: 13px;
+	line-height: 1.29;
+	letter-spacing: 1.1px;
+	text-align: center;
+	color: #4f5767;
+}
+.crew-member-container{
+	width: 19%;
+	text-align: center;
+	display: inline-block;
+}
+.crew-member-container img{
+	border-radius: 50%;
+	height: 128px;
+	width: 128px;
+}
+.crew-foot{
+	font-size: 13px;
+	letter-spacing: 1.1px;
+	text-align: right;
+	color: #4f5767;
+    padding-right: 30px;
+}
+.advisor-header{
+	background-image: url('/img/vision/advisors.png');
+	background-repeat: no-repeat;
+	background-position: 50% 50%;
+	padding: 50px 0;
+	background-size: contain;
+}
+.world-map-bg{
+	background-image: url('/img/vision/worldmap.png');
+	background-repeat: no-repeat;
+	background-position: 50% 50%;
+}
+.member-margin-left-1{
+	margin-left: 25px;
+}
+.member-margin-left-2{
+	margin-left: 135px;
+}
+.login-bg{
+	background-image: url('/img/log-bg.jpg');
+	background-size: cover;
+	background-repeat: no-repeat;
+	height: 100vh;
+}
+.login-title{
+	font-size: 30px;
+	text-align: left;
+	color: #05e7e6;
+}
+.btn-submit{
+	display: flex;
+	align-items: center;
+	justify-content: center;
+	margin-left: 50%;
+	transform: translateX(-50%);
+	width: 303px;
+	height: 56px;
+	border-radius: 100px;
+	background-color: #05e7e6;
+	font-size: 12px;
+	font-weight: bold;
+	letter-spacing: 2px;
+	text-align: center;
+	color: #ffffff;
+	cursor: pointer;
+}
+.g-recaptcha>div{
+	margin-left: 50%;
+	transform: translateX(-50%);
+}
+.terms-title{
+	font-size: 20px;
+	font-weight: 500;
+	line-height: 2.4;
+	text-align: left;
+	color: #232e42;
+}
+.terms-content{
+	font-size: 14px;
+	line-height: 1.71;
+	text-align: left;
+	color: #4a4a4a;
 }
 /*materiaze override*/
 #toast-container{

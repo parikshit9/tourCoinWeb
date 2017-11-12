@@ -22,8 +22,32 @@ worldTourApp.config(function($httpProvider, $stateProvider, $urlRouterProvider, 
             templateUrl: "/views/home.html",
             controller: "wtoController"
         })
-
-    $locationProvider.html5Mode(true);
+        .state("vision", {
+            url: "/vision",
+            templateUrl: "/views/vision.html",
+            controller: "wtoController"
+        })
+        .state("login", {
+            url: "/login",
+            templateUrl: "/views/login.html",
+            controller: "wtoLogInCtrl"
+        })
+        .state("signup", {
+            url: "/signup",
+            templateUrl: "/views/signup.html",
+            controller: "wtoSignUpCtrl"
+        })
+        .state("terms", {
+            url: "/terms",
+            templateUrl: "/views/terms.html",
+            controller: "wtoController"
+        })
+        .state("faq", {
+            url: "/faq",
+            templateUrl: "/views/faq.html",
+            controller: "wtoController"
+        })
+    // $locationProvider.html5Mode(true);
 });
 
 worldTourApp.config(['ChartJsProvider', function (ChartJsProvider) {

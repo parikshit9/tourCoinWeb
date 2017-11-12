@@ -10,7 +10,8 @@ worldTourApp.directive('wtoFooter', function() {
 worldTourApp.directive('wtoHeader', function() {
     return {
         restrict: 'E',
-        templateUrl: '/views/directives/wtoHeader.html'
+        templateUrl: '/views/directives/wtoHeader.html',
+        controller: 'wtoHeaderCtrl'
     };
 });
 
