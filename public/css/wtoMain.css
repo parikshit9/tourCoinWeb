@@ -893,9 +893,11 @@ input:focus{
 }
 /*materiaze override*/
 #toast-container{
-	bottom:1%!important;
-	right: 1%!important;
-	top: auto!important;
+	top: 0!important;
+	left: 0!important;
+	right: 0!important;
+	width: 100%!important;
+	max-width: 100%!important;
 }
 /*(for small screen size less then 480px)*/
 @media only screen and (max-width: 480px){

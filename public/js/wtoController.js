@@ -73,15 +73,16 @@ worldTourApp.controller('wtoController', function($scope, $rootScope, $state, $t
 			"subscriptionEmailId" : id
 		}
 
-		$http.post('http://ec2-18-216-197-240.us-east-2.compute.amazonaws.com:8080/tourcoins/subscribeTourCoins',postObj).then(success,error);
+		// $http.post('http://api.worldtourism.io:8080/tourcoins/subscribeTourCoins',postObj).then(success,error);
+		$http.post('https://api.worldtourism.io/tourcoins/subscribeTourCoins',postObj).then(success,error);
 
 		function success(res){
-			// console.log(res);
-			if (res.data.subscriptionStatus) {
-				Materialize.toast('Subscribed Succesfully!', 4000);
+			console.log(res);
+			if (res.data.success) {
+				Materialize.toast('Subscribed Succesfully!', 3000);
 				$scope.mailId = null;
-			}else if(res.data.Error){
-				Materialize.toast('Mail Id Already Subscribed!', 4000);
+			}else if(res.data.error){
+				Materialize.toast('Mail Id Already Subscribed!', 3000);
 			}
 		}
 

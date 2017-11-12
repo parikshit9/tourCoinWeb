@@ -47,6 +47,16 @@ worldTourApp.config(function($httpProvider, $stateProvider, $urlRouterProvider, 
             templateUrl: "/views/faq.html",
             controller: "wtoController"
         })
+        .state("verify", {
+            url: "/verify",
+            templateUrl: "/views/verify.html",
+            controller: "wtoController"
+        })
+        .state("forgotPassword", {
+            url: "/forgotpassword",
+            templateUrl: "/views/forgotPassword.html",
+            controller: "wtoController"
+        })
     // $locationProvider.html5Mode(true);
 });
 
