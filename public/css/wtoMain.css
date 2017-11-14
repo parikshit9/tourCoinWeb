@@ -891,6 +891,40 @@ input:focus{
 	text-align: left;
 	color: #4a4a4a;
 }
+.dash-block-1{
+	border-radius: 6px;
+	background-color: #ffffff;
+	border: solid 1px #eaeaea;
+	padding: 30px;
+	margin-top: 12px;
+}
+.dash-block-2{
+	border-radius: 6px;
+	background-color: #ffffff;
+	border: solid 1px #eaeaea;
+	padding: 20px;
+}
+.dash-click-generate{
+	font-size: 14px;
+	letter-spacing: 1px;
+	text-align: center;
+	color: #232e42;
+	margin-top: 60px;
+}
+.dash-percent-blocks{
+	display: inline-block;
+	width: 16%;
+	margin: 0 12px;
+	border-radius: 4px;
+}
+.dash-percent{
+	font-size: 28px;
+	font-weight: 600;
+	text-align: center;
+	color: #4a4a4a;
+	border-bottom: 5px solid #05e7e6;
+	padding: 10px;
+}
 /*materiaze override*/
 #toast-container{
 	top: 0!important;
@@ -898,6 +932,9 @@ input:focus{
 	right: 0!important;
 	width: 100%!important;
 	max-width: 100%!important;
+}
+input:not([type]).invalid+label:after, input:not([type]):focus.invalid+label:after, input[type=text]:not(.browser-default).invalid+label:after, input[type=text]:not(.browser-default):focus.invalid+label:after, input[type=password]:not(.browser-default).invalid+label:after, input[type=password]:not(.browser-default):focus.invalid+label:after, input[type=email]:not(.browser-default).invalid+label:after, input[type=email]:not(.browser-default):focus.invalid+label:after, input[type=url]:not(.browser-default).invalid+label:after, input[type=url]:not(.browser-default):focus.invalid+label:after, input[type=time]:not(.browser-default).invalid+label:after, input[type=time]:not(.browser-default):focus.invalid+label:after, input[type=date]:not(.browser-default).invalid+label:after, input[type=date]:not(.browser-default):focus.invalid+label:after, input[type=datetime]:not(.browser-default).invalid+label:after, input[type=datetime]:not(.browser-default):focus.invalid+label:after, input[type=datetime-local]:not(.browser-default).invalid+label:after, input[type=datetime-local]:not(.browser-default):focus.invalid+label:after, input[type=tel]:not(.browser-default).invalid+label:after, input[type=tel]:not(.browser-default):focus.invalid+label:after, input[type=number]:not(.browser-default).invalid+label:after, input[type=number]:not(.browser-default):focus.invalid+label:after, input[type=search]:not(.browser-default).invalid+label:after, input[type=search]:not(.browser-default):focus.invalid+label:after, textarea.materialize-textarea.invalid+label:after, textarea.materialize-textarea:focus.invalid+label:after, .select-wrapper.invalid+label:after{
+    transform: translateY(20px)!important;
 }
 /*(for small screen size less then 480px)*/
 @media only screen and (max-width: 480px){

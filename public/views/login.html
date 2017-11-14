@@ -6,11 +6,11 @@
 				<div class="col s12 m4 topgap40">
 					<div class="login-title">SIGN IN</div>
 					<div class="input-field topgap40">
-						<input placeholder="Email" id="first_name" type="text" class="validate" style="margin-bottom: 0;">
-						<label class="active" for="first_name" style="font-size: 10px;top:10px;">EMAIL</label>
+						<input placeholder="Email" id="email" type="email" class="validate" style="margin-bottom: 0;" ng-model="loginObj.userEmail">
+						<label data-error="Invalid Email" class="active" for="email" style="font-size: 10px;top:10px;">EMAIL</label>
 					</div>
 					<div class="input-field topgap40">
-						<input placeholder="Password" id="password" type="password" class="validate" style="margin-bottom: 0;">
+						<input placeholder="Password" id="password" type="password" class="validate" style="margin-bottom: 0;" ng-model="loginObj.userPassword">
 						<label class="active font-10" style="font-size: 10px;top:10px;" for="password">PASSWORD</label>
 					</div>
 					<div class="topgap15">
@@ -21,7 +21,7 @@
 						<div class="g-recaptcha" data-sitekey="6LdtRDgUAAAAALix9YJiyJKQOiGSWqzEqGD7rLoC"></div>
 					</div>
 					<div class="text-center topgap30">
-						<span class="btn-submit">LOGIN</span>
+						<span class="btn-submit" ng-click="login()">LOGIN</span>
 					</div>
 				</div>
 				<div class="col s4 m4 hide-on-small-only">&nbsp;</div>
