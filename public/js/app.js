@@ -63,7 +63,7 @@ worldTourApp.config(function($httpProvider, $stateProvider, $urlRouterProvider, 
             controller: "wtoController"
         })
         .state("resetPassword", {
-            url: "/resetpassword",
+            url: "/resetpassword/:token",
             templateUrl: "/views/resetPassword.html",
             controller: "wtoController"
         })

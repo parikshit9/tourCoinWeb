@@ -303,15 +303,51 @@ video {
 	height: auto;
 }
 .wto-frame-text{
-	position: absolute;
+	/*position: absolute;
 	top: 45%;
 	left: 50%;
-	transform: translate(-50%,-50%);
-	font-size: 28px;
+	transform: translate(-50%,-50%);*/
+	font-size: 27px;
 	font-weight: 300;
 	text-align: center;
 	color: #fff;
-	width: 60%;
+	/*width: 60%;*/
+}
+.block-1-margin{
+	margin-top: 190px;
+}
+.wto-presell{
+	font-size: 27px;
+	/*font-weight: 500;*/
+	line-height: 0.68;
+	letter-spacing: 0.2px;
+	/*text-align: left;*/
+	color: #ffffff;
+	margin-top: 290px;
+}
+.wto-countdown{
+	line-height: 0.58;
+	letter-spacing: 2.8px;
+	text-align: center;
+	color: #ffffff;
+}
+.wto-dhms{
+	font-size: 10px;
+	font-weight: 500;
+	line-height: 1.75;
+	text-align: center;
+	color: #05e7e6;
+	min-width: 48px;
+	display: inline-block;
+}
+.main-home-mail{
+	border-bottom: solid 1px #e9eff4!important;
+	padding: 0px 0 0px 30px!important;
+	color: #fff!important;
+	margin: 0!important;
+	position: relative!important;
+	font-size: 12px!important;
+	width: 265px!important;
 }
 .wto-mail-sub{
 	width: 250px!important;
@@ -718,7 +754,7 @@ input:focus{
 	float: right;
 }
 .wto-anchor{
-	padding: 14px 24px;
+	padding: 14px 18px;
 	line-height: initial;
 	opacity: 0.5;
 	font-family: Montserrat;
@@ -1015,6 +1051,15 @@ input:not([type]).invalid+label:after, input:not([type]):focus.invalid+label:aft
 	}
 	.visible-xs-only{
 		display: block;
+	}
+	.block-1-margin{
+		margin-top: 100px;
+	}
+	.wto-home-bg{
+		min-height: 100px!important;
+	}
+	.wto-presell{
+		margin-top: 100px;
 	}
 }
 

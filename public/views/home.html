@@ -5,15 +5,17 @@
 			<source src="/img/ny.webm" type="video/webm">
 			<!-- <source src="ny.mp4" type="video/mp4"> -->
 		</video>
-		<div class="col s12 wto-home-bg">
-			<div class="text-center" style="margin-top: 100px;">
+		<div class="col s1 m1 hide-on-small-only">&nbsp;</div>
+		<div class="col s12 m7 wto-home-bg relative">
+			<img src="/img/home-semi.png" class="hide-on-small-only" style="position: absolute;top: 0;left:-14%;">
+			<div class="text-center block-1-margin">
 				<span class="wto-home-span">WORLD</span>
 				<img class="logo" src="/img/tourcoin.png">
 				<span class="wto-home-span">TOURISM</span>
 			</div>
 			<div class="text-center wto-journey-text topgap20">- LET THE JOURNEY BEGIN -</div>
-			<div class="text-center relative topgap40">
-				<img src="/img/frame.png" class="wto-frame">
+			<div class="text-center relative topgap15">
+				<!-- <img src="/img/frame.png" class="wto-frame"> -->
 				<span class="wto-frame-text">
 					<div>World´s first decentralized coin which can be mined</div>
 					<div>
@@ -25,14 +27,50 @@
 					</div>
 				</span>
 			</div>
-			<div class="text-center topgap50 bottomgap20">
-				<span class="inline-block relative">
-					<input type="email" ng-model="mailId" placeholder="Email" class="wto-mail-sub">
-					<img src="/img/email.svg" class="mail-icon">
-					<span class="mail-subscribe" ng-click="subscribeMail(mailId)">SUBSCRIBE</span>
-				</span>
+		</div>
+		<div class="col s12 m3">
+			<div class="wto-presell text-center">
+				<span class="font-weight-500">PRESELL</span>
+				<span class="font-weight-300"> STARTS</span>
+			</div>
+			<div class="topgap40">
+				<div class="text-center font-30">
+					<span class="inline-block wto-countdown" id="countdown-dy"></span>
+					<span class="inline-block wto-countdown"> : </span>
+					<span class="inline-block wto-countdown" id="countdown-hr"></span>
+					<span class="inline-block wto-countdown"> : </span>
+					<span class="inline-block wto-countdown" id="countdown-mn"></span>
+					<span class="inline-block wto-countdown"> : </span>
+					<span class="inline-block wto-countdown" id="countdown-sc"></span>
+				</div>
+				<div class="text-center topgap6">
+					<span class="inline-block wto-dhms">
+						DAYS
+					</span>
+					<span class="inline-block wto-countdown font-30" style="color: transparent;"> : </span>
+					<span class="inline-block wto-dhms">
+						HOURS
+					</span>
+					<span class="inline-block wto-countdown font-30" style="color: transparent;"> : </span>
+					<span class="inline-block wto-dhms">
+						MINUTES
+					</span>
+					<span class="inline-block wto-countdown font-30" style="color: transparent;"> : </span>
+					<span class="inline-block wto-dhms">
+						SECONDS
+					</span>
+				</div>
+				<div class="text-center topgap60">
+					<span class="inline-block relative">
+						<input type="email" ng-model="mailId" placeholder="Enter Email Address" class="main-home-mail">
+						<img src="/img/email.svg" class="mail-icon" style="left:0;">
+						<!-- <span class="mail-subscribe" ng-click="subscribeMail(mailId)">SUBSCRIBE</span> -->
+					</span>
+				</div>
+				<div class="text-right font-weight-500 font-45 topgap12 cursor label-white" style="letter-spacing: 0.2px;" ng-click="subscribeMail(mailId)">SUBSCRIBE</div>
 			</div>
 		</div>
+		<div class="col s1 m1 hide-on-small-only">&nbsp;</div>
 	</div>
 
 	<div class="row wto-white-bg">
@@ -43,7 +81,7 @@
 				<span class="font-weight-600"> US</span>
 			</h5>
 			<div class="font-14 text-center topgap20 bottomgap40" style="color: #7f848b">
-				A Tourism Community - with diverse group of adroit individuals and skill sets, including digital mining, tourism, legal and decentralized pundits. uniting to realize a vision shared by 25 members of the World Tourism Crew and 350 tour agencies world wide. All passionately devoted to collaboration and the development of the tourism and cryptocurrency ecosystem and community.There must be an end to major tour agencies monopoly on tourism sector ,and a fundamental restructuring of our tourism community and ecosystem to ensure that inequality of tourists are addressed thoroughly.
+				World Tourism is a one-of-its-kind tourism community comprising a diverse group of adroit individuals with varied skill sets including digital mining, tourism, legal and decentralized pundits, who have come together to realize a vision shared by 30 members of the World Tourism Crew and 350 tour agencies worldwide. All passionately devoted to collaboration and development of the tourism and cryptocurrency ecosystem and community. We believe that there must be an end to major tour agencies’ monopoly on tourism sector, and a fundamental restructuring of our tourism community and ecosystem to ensure that the discrepancies faced by tourists in travel costs across different countries can be addressed thoroughly.
 			</div>
 		</div>
 		<div class="col s1">&nbsp;</div>
@@ -89,7 +127,7 @@
 					</span>
 					<div class="core-head-title topgap20">TRADING</div>
 					<div class="core-text-container full-padding hide-on-small-only">
-						Buying and selling of the Tourcoins at different price points and generating profit from the same. You can buy Tourcoins at a lower price and sell them at a higher price.
+						Buying and selling of Tourcoins at different price points and generating profit from the same. You can buy Tourcoins at a lower price and sell them at a higher price.
 					</div>
 				</div>
 				<div class="col s6 m4 text-center">
@@ -98,7 +136,7 @@
 					</span>
 					<div class="core-head-title topgap20">TRANSPARENCY</div>
 					<div class="core-text-container full-padding hide-on-small-only">
-						We provide timely, meaningful and reliable disclosures about the company's decentralized objectives, finanacial performance & future frameworks.
+						To provide timely, meaningful and reliable disclosures about the company's decentralized objectives, financial performance & future frameworks.
 					</div>
 				</div>
 				<div class="col s6 m4 text-center hide-on-small-only">
@@ -133,7 +171,7 @@
 					</span>
 					<div class="core-head-title topgap20">FIXED DEPOSIT</div>
 					<div class="core-text-container full-padding hide-on-small-only">
-						Fixed Deposits is an investment opportunity where you can store your Tourcoins and earn a fixed periodic interest as well as company's mining profits on the same.
+						An investment opportunity where you can store your Tourcoins and earn a fixed periodic interest as well as company and mining profits on the same.
 					</div>
 				</div>
 			</div>
@@ -151,7 +189,7 @@
 					</span>
 					<div class="core-head-title topgap20">MINING</div>
 					<div class="core-text-container full-padding hide-on-small-only">
-						Tourcoin mining is the process by which new Tourcoins will be generated. You can mine Tourcoins with a CPU/GPU/ASIC. A total of 21 Million coin will be mined.
+						The process by which new Tourcoins will be generated. You can mine Tourcoins with a CPU/GPU/ASIC. A total of 21 million coins will be mined.
 					</div>
 				</div>
 				<div class="col s6 m4 text-center">
@@ -160,7 +198,7 @@
 					</span>
 					<div class="core-head-title topgap20">CLOUD MINING</div>
 					<div class="core-text-container full-padding hide-on-small-only">
-						You can now join our cloud mine without the hassle of buying maintaining equipment, managing electricity and resources cost etc.
+						You can now join our cloud mine without the hassles of buying and maintaining equipment, managing electricity and resource cost etc.
 					</div>
 				</div>
 				<div class="col s2 m2 hide-on-small-only">&nbsp;</div>
@@ -179,7 +217,7 @@
 					</span>
 					<div class="core-head-title topgap20">STAKING</div>
 					<div class="core-text-container full-padding hide-on-small-only">
-						Earn Up to 350% return annualy through restructuring & POS minting. It is very simple to earn by just holding and storing coins in your TOURCOIN QT wallet.
+						Earn up to 350% return annually through restructuring & POS minting. It is very simple to earn through this method, by just holding & storing coins in your TOURCOIN-QT wallet.
 					</div>
 				</div>
 				<div class="col m4 s6 text-center">
@@ -188,7 +226,7 @@
 					</span>
 					<div class="core-head-title topgap20">DECENTRALIZED</div>
 					<div class="core-text-container full-padding hide-on-small-only">
-						Decision-making authority to be distributed throughout a larger group. It also connotes a higher authority given to Tourcoin holders, clientele, functionaries, executives, & support staffs.
+						Decision-making authority to be distributed among a larger group. It also connotes a higher authority given to Tourcoin holders, clientele, functionaries, executives, and support staff.
 					</div>
 				</div>
 				<div class="col m4 s6 text-center hide-on-small-only">
@@ -197,7 +235,7 @@
 					</span>
 					<div class="core-head-title topgap20">FIXED DEPOSIT</div>
 					<div class="core-text-container full-padding hide-on-small-only">
-						Fixed Deposits is an investment opportunity where you can store your Tourcoins and earn a fixed periodic interest as well as company's mining profits on the same.
+						An investment opportunity where you can store your Tourcoins and earn a fixed periodic interest as well as company and mining profits on the same.
 					</div>
 				</div>
 			</div>
@@ -225,7 +263,7 @@
 					</span>
 					<div class="core-head-title topgap20">GLOBALIZATION</div>
 					<div class="core-text-container full-padding hide-on-small-only">
-						To increase interaction of people through the growth of international flow of tourists, finances, ideas and culture. Primary objective for an economic and decentralized process of integration which has social and cultural aspects.
+						To increase interaction of people through growth in the flow of international tourists, finances, ideas and culture. It is the primary objective for an economic and decentralized process of integration which has social and cultural aspects.
 					</div>
 				</div>
 				<div class="col s2 m2 hide-on-small-only">&nbsp;</div>
@@ -246,7 +284,7 @@
 					Dec 2015
 				</div>
 				<div class="col s6 road-map-right-1">
-					World Tourism established as a tour and travel agency which promotes tourism as a driver of economic growth, inclusive development and environmental sustainability and offers leadership and support to the sector in advancing knowledge and tourism services worldwide.
+					World Tourism established as a tour and travel agency which promotes tourism as a driver of economic growth, inclusive development, and environmental sustainability and offers leadership and support to the sector in advancing knowledge and tourism services worldwide.
 				</div>
 				<span class="map-pointer-container">
 					<span class="map-pointer-layer1">
@@ -261,7 +299,7 @@
 
 			<div class="row road-map-flex relative">
 				<div class="col s6 road-map-left-2">
-					Successfully build a team and executed the theory and practice of touring, the business of attracting, accommodating, and entertaining tourists, and the business of operating tours.Acquired relevant licences and authorization from different organization as well as respective central and state governments.Organized events and Conferences to promote owner adventure.
+					Successfully built a team and executed the theory and practice of touring, the business of attracting, accommodating, and entertaining tourists, and the business of operating tours. Acquired relevant licences and authorization from different organizations as well as respective central and state governments. Organized events and conferences to promote owner venture.
 				</div>
 				<div class="col s6 road-map-right-2">
 					Jan 2016
@@ -282,7 +320,7 @@
 					Mar 2016
 				</div>
 				<div class="col s6 road-map-right-1">
-					Organized professionals to envisaged as leading to management of all resources in such a way that economic, social and aesthetic needs can be fulfilled while maintaining cultural integrity.Initiated major promotional activities worldwide. Catered our first traveler and rated one of the finest among the best.
+					Organized professionals envisaged as leading to management of resources in a way that economic, social and aesthetic needs can be fulfilled while maintaining cultural integrity. Initiated major promotional activities worldwide. Catered to our very first traveler and got rated as one of the finest.
 				</div>
 				<span class="map-pointer-container">
 					<span class="map-pointer-layer1">
@@ -297,7 +335,7 @@
 
 			<div class="row road-map-flex relative">
 				<div class="col s6 road-map-left-2">
-					First customer received from Germany and within a month booked and catered 250 tour packages.we determined what our market niche could be, and established whether or not we could compete in the existing market, and what it would take to succeed. Heartily welcomed our first PAN American client to our project. Added another value added part to our service (Adventure Tourism and Recreation)
+					Received our first customer from Germany and within a month, booked and catered 250 tour packages. Identified our  niche market, and established if we could compete in the existing market, and what would it take to succeed. Heartily welcomed our first PAN American client to our project. Added another value added part to our service (Adventure Tourism and Recreation)
 				</div>
 				<div class="col s6 road-map-right-2">
 					Aug 2016
@@ -318,7 +356,7 @@
 					Dec 2016
 				</div>
 				<div class="col s6 road-map-right-1">
-					Expert crew members to cater every need of a traveller and tourism sector. From transportation, visa processing, hotel booking, security, travel and tour guides, insurance etc.Added legal, emigration and financial consultants globally. Spread our influences towards entrepreneurial opportunities, generate tax revenues, development in rural regions and foreign exchange generator.
+					 Brought expert crew members on-board to cater to every need of a traveller – from transportation to visa processing, hotel booking, security, travel and tour guides, insurance etc. Added legal, emigration and financial consultants globally. Spread our influences towards entrepreneurial opportunities, generating tax revenues, development in rural regions and foreign exchange generation.
 				</div>
 				<span class="map-pointer-container">
 					<span class="map-pointer-layer1">
@@ -333,7 +371,7 @@
 
 			<div class="row road-map-flex relative">
 				<div class="col s6 road-map-left-2">
-					Initiated discussion with top crypto experts and legal advisors to raise further capital and integrate cryptocurrency with tourism. Formalized team of blockchain and tourism experts as well as consultants. Reached consensuses to construct  a ecosystem where tourism sector will be integrated with crypto currencies. Structural framework for mining and token distribution created.
+					Initiated discussion with top crypto experts and legal advisors to raise further capital and integrate cryptocurrency with tourism. Formalized a team of blockchain and tourism experts as well as consultants. Reached consensus to create an ecosystem where the tourism sector will be integrated with cryptocurrencies. Structural framework for mining and token distribution created.
 				</div>
 				<div class="col s6 road-map-right-2">
 					Jan 2017
@@ -354,7 +392,7 @@
 					July 2017
 				</div>
 				<div class="col s6 road-map-right-1">
-					Roadmap developed for the presale and ICO launch, whitepaper, mining SDKs, stacking ,QT wallet creation, smartcontract ERC20,blockchain integration to Tourcoin. Planned integration with the cryptocurrency exchanges and global leaders in blockchain. In-app expanded wallet integration for global travelers and clients.
+					Developed a roadmap for the pre sale and ICO launch, whitepaper, mining SDKs, stacking, QT wallet creation, Smart Contract ERC 20, and blockchain integration to Tourcoin. Planned integration with  cryptocurrency exchanges and global leaders in blockchain. Expanded in-app wallet integration for global travelers and clients.
 				</div>
 				<span class="map-pointer-container">
 					<span class="map-pointer-layer1">
@@ -369,7 +407,7 @@
 
 			<div class="row road-map-flex relative">
 				<div class="col s6 road-map-left-2">
-					Presale launch date finalized- 1st week December 2017 and normal sale begin on 2nd week December 2017. Extended promotional and educational campaign launch,  Securing partnerships with major global players, Introduction of planned mining and token holders reward campaign.
+					Pre Sale launch date finalized, to take place in the1st week of December 2017 and normal sale to begin in the 2nd week of December 2017. Extended promotional and educational campaign to be launched. Securing partnerships with major global players and introduction of planned mining and token holders reward campaign.
 				</div>
 				<div class="col s6 road-map-right-2">
 					Dec 2017
@@ -390,7 +428,7 @@
 					Mar 2018
 				</div>
 				<div class="col s6 road-map-right-1">
-					Introduction of blockchain based platform to Integrate website, mining SDKs, stacking,QT wallets for multiple platforms, smartcontract ERC20, payment gateway, B2B, C2C and B2C support. ISO (DIN EN ISO 9001) certified software's ( Reservation, booking, management, operation ) integrated to blockchain
+					Introduction of blockchain based platform to integrate website, mining SDKs, stacking, QT wallets for multiple platforms, smart contract ERC 20, payment gateway, B2B, C2C and B2C support. ISO (DIN EN ISO 9001) certified softwares ( reservation, booking, management, operation ) integrated to blockchain.
 				</div>
 				<span class="map-pointer-container">
 					<span class="map-pointer-layer1">
@@ -405,7 +443,7 @@
 
 			<div class="row road-map-flex relative">
 				<div class="col s6 road-map-left-2">
-					SDKs will be created for Cloud and hardware mining , integrate multiple wallets,enhanced smartcontract protocols and alignment with Wave storage, navigation, Wallets for fiat , mobile applications, Peer to peer navigation system, tourism rating APIs etc.
+					SDKs to be created for Cloud and hardware mining, integrated multiple wallets, enhanced smart contract protocols and alignment with Wave storage, navigation, wallets for fiat, mobile applications, peer to peer navigation system, tourism rating APIs etc.
 				</div>
 				<div class="col s6 road-map-right-2">
 					Oct 2018
@@ -426,7 +464,7 @@
 					Jan 2019
 				</div>
 				<div class="col s6 road-map-right-1">
-					Gateway to integrate - SSL , Biometrics, Decentralised Ledgers, Smart contracts, Open API, Internet of Things, Big Data, Applied AI, Reel world with real world and arbitrate angel and venture investors for tourism industry.
+					Gateway to be created to integrate SSL, Biometrics, Decentralised Ledgers, Smart contracts, Open API, Internet of Things, Big Data, Applied AI, Reel world with real world and arbitrate angel and venture investors for tourism industry.
 				</div>
 				<span class="map-pointer-container">
 					<span class="map-pointer-layer1">
@@ -441,7 +479,7 @@
 
 			<div class="row road-map-flex relative">
 				<div class="col s6 road-map-left-2">
-					Superconductive trade and exchange mechanism. Facilitate C2C, B2B and B2C spend, secure or exchange digital assets and currencies without 3rd party involvement. Mining SDKs and APIs for In app mobile and desktop platforms.
+					 A superconductive trade and exchange mechanism to be created. To facilitate C2C, B2B and B2C spend, secure or exchange digital assets and currencies without 3rd party involvement. Mining SDKs and APIs for In-app mobile and desktop platforms.
 				</div>
 				<div class="col s6 road-map-right-2">
 					June 2019
@@ -564,7 +602,7 @@
 
 	<div class="row wto-white-bg hide-on-small-only">
 		<div class="col s1">&nbsp;</div>
-		<div class="col s10 topgap40">
+		<div class="col s10 topgap40 section scrollspy" id="rewards">
 			<h5 class="text-center font-27">
 				<span class="wto-distribution-title">REWARDS & BOUNTIES*</span>
 			</h5>
@@ -602,7 +640,7 @@
 					<div class="bonus-title">Top ICO Contributors<br/>&nbsp;<br/>&nbsp;</div>
 				</div>
 			</div>
-			<div class="reward-bottom-text">* Top 10 highest numbers of referral by an investor will be awarded a tour package of their respective choice (t&c apply).</div>
+			<div class="reward-bottom-text">* Investors with the highest number of referrals will be awarded tour package of their respective choice (T&C apply).</div>
 		</div>
 		<div class="col s1">&nbsp;</div>
 	</div>

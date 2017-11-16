@@ -12,6 +12,9 @@
 					<li ng-if="state.current.name == 'home'">
 						<a class="wto-anchor {{boolChangeClass?'':'border-none'}}" href="#distribution">ANALYTICS</a>
 					</li>
+					<li ng-if="state.current.name == 'home'">
+						<a class="wto-anchor {{boolChangeClass?'':'border-none'}}" href="#rewards">REWARDS</a>
+					</li>
 
 					<li ng-if="state.current.name != 'home'">
 						<a class="wto-anchor {{boolChangeClass?'':'border-none'}}" ui-sref="home">ABOUT US</a>
@@ -22,9 +25,18 @@
 					<li ng-if="state.current.name != 'home'">
 						<a class="wto-anchor {{boolChangeClass?'':'border-none'}}" ui-sref="home">ANALYTICS</a>
 					</li>
+					<li ng-if="state.current.name != 'home'">
+						<a class="wto-anchor {{boolChangeClass?'':'border-none'}}" ui-sref="home">REWARDS</a>
+					</li>
 
 					<li>
 						<a class="wto-anchor {{boolChangeClass?'':'border-none'}} {{state.current.name == 'vision' ? 'anchor-active':''}}" ui-sref="vision">VISION</a>
+					</li>
+					<li ng-if="state.current.name == 'vision'">
+						<a class="wto-anchor {{boolChangeClass?'':'border-none'}}" href="#crew">CREW</a>
+					</li>
+					<li>
+						<a class="wto-anchor {{boolChangeClass?'':'border-none'}} {{state.current.name == 'faq' ? 'anchor-active':''}}" ui-sref="faq">FAQs</a>
 					</li>
 				</ul>
 			</div>

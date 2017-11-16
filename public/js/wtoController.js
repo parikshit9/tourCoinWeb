@@ -90,4 +90,59 @@ worldTourApp.controller('wtoController', function($scope, $rootScope, $state, $t
 			console.log(err);
 		}
 	}
+
+	var end = new Date('12/01/2017 12:00 AM');
+
+    var _second = 1000;
+    var _minute = _second * 60;
+    var _hour = _minute * 60;
+    var _day = _hour * 24;
+    var timer;
+
+    function showRemaining() {
+        var now = new Date();
+        var distance = end - now;
+        if (distance < 0) {
+
+            clearInterval(timer);
+            document.getElementById('countdown').innerHTML = 'EXPIRED!';
+
+            return;
+        }
+        var days = Math.floor(distance / _day);
+        var hours = Math.floor((distance % _day) / _hour);
+        var minutes = Math.floor((distance % _hour) / _minute);
+        var seconds = Math.floor((distance % _minute) / _second);
+
+        document.getElementById('countdown-dy').innerHTML = ('0'+days).slice(-2);
+        document.getElementById('countdown-hr').innerHTML = ('0'+hours).slice(-2);
+        document.getElementById('countdown-mn').innerHTML = ('0'+minutes).slice(-2);
+        document.getElementById('countdown-sc').innerHTML = ('0'+seconds).slice(-2);
+    }
+
+    timer = setInterval(showRemaining, 1000);
+
+    $rootScope.forgotMail;
+
+    $scope.sendResetLink = function(){
+    	var postObj = {};
+    	postObj.userEmail = $rootScope.forgotMail;
+
+    	// $http.post('http://api.worldtourism.io:8080/tourcoins/forgotPassword',postObj).then(success,error);
+    	$http.post('https://api.worldtourism.io/tourcoins/forgotPassword',postObj).then(success,error);
+
+    	function success(res){
+    		console.log(res);
+    		if (res.data.success) {
+    			Materialize.toast(res.data.success, 3000);
+    			$state.go('resetInstructions');
+    		}else if(res.data.error){
+    			Materialize.toast(res.data.error, 3000);
+    		}
+    	}
+
+    	function error(err){
+    		alert(err);
+    	}
+    }
 });
