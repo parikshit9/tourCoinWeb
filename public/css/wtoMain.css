@@ -373,7 +373,7 @@ video {
 .mail-icon{
 	position: absolute;
     left: 20px;
-    top: 5px;
+    top: 16px;
 }
 .mail-subscribe{
 	cursor: pointer;
@@ -408,7 +408,7 @@ video {
 .news-icon{
 	position: absolute;
     left: 20px;
-    top: 4px;
+    top: 19px;
 }
 .news-subscribe{
 	cursor: pointer;
@@ -422,7 +422,7 @@ video {
 	font-weight: 600;
 	text-align: center;
 	color: #fff;
-	top: -1px;
+	top: 13px;
 	/*padding: 0.4%;*/
 	display: flex;
 	align-items: center;
