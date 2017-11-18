@@ -17,7 +17,8 @@
 						<div class="input-field topgap40">
 							<input data-error="wrong" placeholder="Confirm Password" id="confirm_password" type="password" class="validate" style="margin-bottom: 0;" ng-model="registerObj.pass" ng-change="comparePass()" ng-pattern="registerObj.userPassword" required>
 							<label class="active font-10" style="font-size: 10px;top:10px;" for="confirm_password">CONFIRM PASSWORD</label>
-							<div class="font-10 topgap6">{{matchError}}</div>
+							<div class="font-10 topgap6" style="color: #ff6565">{{matchError}}</div>
+							<div class="font-10 topgap6" style="color: #ff6565">{{pwdErrMsg}}</div>
 						</div>
 						<div class="topgap15">
 							<a class="inline-block label-grey font-12">Already a member?</a>

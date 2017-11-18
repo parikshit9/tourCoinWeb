@@ -27,10 +27,42 @@
 					</div>
 				</span>
 			</div>
+
+			<span class="wto-pricing hide-on-small-only">
+				<span class="inline-block text-center" style="vertical-align: bottom;">
+					<span class="inline-block font-weight-500 font-12 label-white text-center" style="width:90px;vertical-align: sub;">1 TOURCOIN = </span><br/>
+					<span class="inline-block font-12 text-center" style="">&nbsp;</span>
+				</span>
+
+				<span class="inline-block text-center" style="margin: 0 6px;">
+					<span class="inline-block font-weight-500 font-12 label-white text-center" style="padding: 6px 0;border-bottom : 2px solid #05e7e6;width:70px;"> $ 1.25</span><br/>
+					<span class="inline-block font-12 text-center" style="padding: 6px 0;color: rgba(255,255,255,0.7)">PRESALE</span>
+				</span>
+
+				<span class="inline-block text-center" style="margin: 0 6px;">
+					<span class="inline-block font-weight-500 font-12 label-white text-center" style="padding: 6px 0;border-bottom : 2px solid #05e7e6;width:70px;"> $ 1.50</span><br/>
+					<span class="inline-block font-12 text-center" style="padding: 6px 0;color: rgba(255,255,255,0.7)">LOT 1</span>
+				</span>
+
+				<span class="inline-block text-center" style="margin: 0 6px;">
+					<span class="inline-block font-weight-500 font-12 label-white text-center" style="padding: 6px 0;border-bottom : 2px solid #05e7e6;width:70px;"> $ 1.75</span><br/>
+					<span class="inline-block font-12 text-center" style="padding: 6px 0;color: rgba(255,255,255,0.7)">LOT 2</span>
+				</span>
+
+				<span class="inline-block text-center" style="margin: 0 6px;">
+					<span class="inline-block font-weight-500 font-12 label-white text-center" style="padding: 6px 0;border-bottom : 2px solid #05e7e6;width:70px;"> $ 2.00</span><br/>
+					<span class="inline-block font-12 text-center" style="padding: 6px 0;color: rgba(255,255,255,0.7)">LOT 3</span>
+				</span>
+
+				<span class="inline-block text-center" style="margin: 0 6px;">
+					<span class="inline-block font-weight-500 font-12 label-white text-center" style="padding: 6px 0;border-bottom : 2px solid #05e7e6;width:70px;"> $ 2.50</span><br/>
+					<span class="inline-block font-12 text-center" style="padding: 6px 0;color: rgba(255,255,255,0.7)">LOT 3</span>
+				</span>
+			</span>
 		</div>
 		<div class="col s12 m3">
 			<div class="wto-presell text-center">
-				<span class="font-weight-500">PRESELL</span>
+				<span class="font-weight-500">PRESALE</span>
 				<span class="font-weight-300"> STARTS</span>
 			</div>
 			<div class="topgap40">
@@ -60,14 +92,16 @@
 						SECONDS
 					</span>
 				</div>
-				<div class="text-center topgap60">
+				<div class="text-center topgap60 hide-on-small-only">
 					<span class="inline-block relative">
-						<input type="email" ng-model="mailId" placeholder="Enter Email Address" class="main-home-mail">
+						<input type="email" id="sub" ng-model="mailId" ng-change="validateEmail(mailId)" placeholder="Enter Email Address" class="main-home-mail">
 						<img src="/img/email.svg" class="mail-icon" style="left:0;">
 						<!-- <span class="mail-subscribe" ng-click="subscribeMail(mailId)">SUBSCRIBE</span> -->
+						<!-- <label data-error="Invalid Email" class="active font-10" style="font-size: 10px;top:10px;" for="sub"></label> -->
+						<div class="font-10" style="color: red;margin-top: 4px;">{{errmsg}}</div>
 					</span>
 				</div>
-				<div class="text-right font-weight-500 font-45 topgap12 cursor label-white" style="letter-spacing: 0.2px;" ng-click="subscribeMail(mailId)">SUBSCRIBE</div>
+				<div class="text-right font-weight-500 font-45 topgap12 cursor big-sub-label hide-on-small-only" style="letter-spacing: 0.2px;" ng-click="subscribeMail(mailId)">SUBSCRIBE</div>
 			</div>
 		</div>
 		<div class="col s1 m1 hide-on-small-only">&nbsp;</div>
@@ -77,8 +111,8 @@
 		<div class="col s1">&nbsp;</div>
 		<div class="col s10 topgap40 section scrollspy" id="about">
 			<h5 class="text-center font-27" style="margin-top: 20px;">
-				<span class="font-weight-100">About</span>
-				<span class="font-weight-600"> US</span>
+				<span class="font-weight-600">About</span>
+				<span class="font-weight-100"> US</span>
 			</h5>
 			<div class="font-14 text-center topgap20 bottomgap40" style="color: #7f848b">
 				World Tourism is a one-of-its-kind tourism community comprising a diverse group of adroit individuals with varied skill sets including digital mining, tourism, legal and decentralized pundits, who have come together to realize a vision shared by 30 members of the World Tourism Crew and 350 tour agencies worldwide. All passionately devoted to collaboration and development of the tourism and cryptocurrency ecosystem and community. We believe that there must be an end to major tour agencies’ monopoly on tourism sector, and a fundamental restructuring of our tourism community and ecosystem to ensure that the discrepancies faced by tourists in travel costs across different countries can be addressed thoroughly.
@@ -272,7 +306,7 @@
 		<div class="col s1 m1 hide-on-small-only">&nbsp;</div>
 	</div>
 
-	<div class="row wto-map-bg relative hide-on-small-only">
+	<div class="row wto-map-bg relative">
 		<div class="col s1 m1 hide-on-small-only">&nbsp;</div>
 		<div class="col s12 m10 map-bg-img relative section scrollspy" id="road-map" style="min-height: 900px;">
 			<h5 class="text-center font-27" style="margin-top: 100px;">
@@ -280,10 +314,10 @@
 			</h5>
 			
 			<div class="row road-map-flex relative">
-				<div class="col s6 road-map-left-1">
+				<div class="col s12 m6 road-map-left-1">
 					Dec 2015
 				</div>
-				<div class="col s6 road-map-right-1">
+				<div class="col s12 m6 road-map-right-1">
 					World Tourism established as a tour and travel agency which promotes tourism as a driver of economic growth, inclusive development, and environmental sustainability and offers leadership and support to the sector in advancing knowledge and tourism services worldwide.
 				</div>
 				<span class="map-pointer-container">
@@ -298,10 +332,13 @@
 			</div>
 
 			<div class="row road-map-flex relative">
-				<div class="col s6 road-map-left-2">
+				<div class="col s12 m6 road-map-right-2 visible-xs-only">
+					Jan 2016
+				</div>
+				<div class="col s12 m6 road-map-left-2">
 					Successfully built a team and executed the theory and practice of touring, the business of attracting, accommodating, and entertaining tourists, and the business of operating tours. Acquired relevant licences and authorization from different organizations as well as respective central and state governments. Organized events and conferences to promote owner venture.
 				</div>
-				<div class="col s6 road-map-right-2">
+				<div class="col s12 m6 road-map-right-2 hide-on-small-only">
 					Jan 2016
 				</div>
 				<span class="map-pointer-container">
@@ -316,10 +353,10 @@
 			</div>
 
 			<div class="row road-map-flex relative">
-				<div class="col s6 road-map-left-1">
+				<div class="col s12 m6 road-map-left-1">
 					Mar 2016
 				</div>
-				<div class="col s6 road-map-right-1">
+				<div class="col s12 m6 road-map-right-1">
 					Organized professionals envisaged as leading to management of resources in a way that economic, social and aesthetic needs can be fulfilled while maintaining cultural integrity. Initiated major promotional activities worldwide. Catered to our very first traveler and got rated as one of the finest.
 				</div>
 				<span class="map-pointer-container">
@@ -334,10 +371,13 @@
 			</div>
 
 			<div class="row road-map-flex relative">
-				<div class="col s6 road-map-left-2">
+				<div class="col s12 m6 road-map-right-2 visible-xs-only">
+					Aug 2016
+				</div>
+				<div class="col s12 m6 road-map-left-2">
 					Received our first customer from Germany and within a month, booked and catered 250 tour packages. Identified our  niche market, and established if we could compete in the existing market, and what would it take to succeed. Heartily welcomed our first PAN American client to our project. Added another value added part to our service (Adventure Tourism and Recreation)
 				</div>
-				<div class="col s6 road-map-right-2">
+				<div class="col s12 m6 road-map-right-2 hide-on-small-only">
 					Aug 2016
 				</div>
 				<span class="map-pointer-container">
@@ -352,10 +392,10 @@
 			</div>
 
 			<div class="row road-map-flex relative">
-				<div class="col s6 road-map-left-1">
+				<div class="col s12 m6 road-map-left-1">
 					Dec 2016
 				</div>
-				<div class="col s6 road-map-right-1">
+				<div class="col s12 m6 road-map-right-1">
 					 Brought expert crew members on-board to cater to every need of a traveller – from transportation to visa processing, hotel booking, security, travel and tour guides, insurance etc. Added legal, emigration and financial consultants globally. Spread our influences towards entrepreneurial opportunities, generating tax revenues, development in rural regions and foreign exchange generation.
 				</div>
 				<span class="map-pointer-container">
@@ -370,10 +410,13 @@
 			</div>
 
 			<div class="row road-map-flex relative">
-				<div class="col s6 road-map-left-2">
+				<div class="col s12 m6 road-map-right-2 visible-xs-only">
+					Jan 2017
+				</div>
+				<div class="col s12 m6 road-map-left-2">
 					Initiated discussion with top crypto experts and legal advisors to raise further capital and integrate cryptocurrency with tourism. Formalized a team of blockchain and tourism experts as well as consultants. Reached consensus to create an ecosystem where the tourism sector will be integrated with cryptocurrencies. Structural framework for mining and token distribution created.
 				</div>
-				<div class="col s6 road-map-right-2">
+				<div class="col s12 m6 road-map-right-2 hide-on-small-only">
 					Jan 2017
 				</div>
 				<span class="map-pointer-container">
@@ -388,10 +431,10 @@
 			</div>
 
 			<div class="row road-map-flex relative">
-				<div class="col s6 road-map-left-1">
+				<div class="col s12 m6 road-map-left-1">
 					July 2017
 				</div>
-				<div class="col s6 road-map-right-1">
+				<div class="col s12 m6 road-map-right-1">
 					Developed a roadmap for the pre sale and ICO launch, whitepaper, mining SDKs, stacking, QT wallet creation, Smart Contract ERC 20, and blockchain integration to Tourcoin. Planned integration with  cryptocurrency exchanges and global leaders in blockchain. Expanded in-app wallet integration for global travelers and clients.
 				</div>
 				<span class="map-pointer-container">
@@ -406,10 +449,13 @@
 			</div>
 
 			<div class="row road-map-flex relative">
-				<div class="col s6 road-map-left-2">
+				<div class="col s12 m6 road-map-right-2 visible-xs-only">
+					Dec 2017
+				</div>
+				<div class="col s12 m6 road-map-left-2">
 					Pre Sale launch date finalized, to take place in the1st week of December 2017 and normal sale to begin in the 2nd week of December 2017. Extended promotional and educational campaign to be launched. Securing partnerships with major global players and introduction of planned mining and token holders reward campaign.
 				</div>
-				<div class="col s6 road-map-right-2">
+				<div class="col s12 m6 road-map-right-2 hide-on-small-only">
 					Dec 2017
 				</div>
 				<span class="map-pointer-container">
@@ -424,10 +470,10 @@
 			</div>
 
 			<div class="row road-map-flex relative">
-				<div class="col s6 road-map-left-1">
+				<div class="col s12 m6 road-map-left-1">
 					Mar 2018
 				</div>
-				<div class="col s6 road-map-right-1">
+				<div class="col s12 m6 road-map-right-1">
 					Introduction of blockchain based platform to integrate website, mining SDKs, stacking, QT wallets for multiple platforms, smart contract ERC 20, payment gateway, B2B, C2C and B2C support. ISO (DIN EN ISO 9001) certified softwares ( reservation, booking, management, operation ) integrated to blockchain.
 				</div>
 				<span class="map-pointer-container">
@@ -442,10 +488,13 @@
 			</div>
 
 			<div class="row road-map-flex relative">
-				<div class="col s6 road-map-left-2">
+				<div class="col s12 m6 road-map-right-2 visible-xs-only">
+					Oct 2018
+				</div>
+				<div class="col s12 m6 road-map-left-2">
 					SDKs to be created for Cloud and hardware mining, integrated multiple wallets, enhanced smart contract protocols and alignment with Wave storage, navigation, wallets for fiat, mobile applications, peer to peer navigation system, tourism rating APIs etc.
 				</div>
-				<div class="col s6 road-map-right-2">
+				<div class="col s12 m6 road-map-right-2 hide-on-small-only">
 					Oct 2018
 				</div>
 				<span class="map-pointer-container">
@@ -460,10 +509,10 @@
 			</div>
 
 			<div class="row road-map-flex relative">
-				<div class="col s6 road-map-left-1">
+				<div class="col s12 m6 road-map-left-1">
 					Jan 2019
 				</div>
-				<div class="col s6 road-map-right-1">
+				<div class="col s12 m6 road-map-right-1">
 					Gateway to be created to integrate SSL, Biometrics, Decentralised Ledgers, Smart contracts, Open API, Internet of Things, Big Data, Applied AI, Reel world with real world and arbitrate angel and venture investors for tourism industry.
 				</div>
 				<span class="map-pointer-container">
@@ -478,10 +527,13 @@
 			</div>
 
 			<div class="row road-map-flex relative">
-				<div class="col s6 road-map-left-2">
+				<div class="col s12 m6 road-map-right-2 visible-xs-only">
+					June 2019
+				</div>
+				<div class="col s12 m6 road-map-left-2">
 					 A superconductive trade and exchange mechanism to be created. To facilitate C2C, B2B and B2C spend, secure or exchange digital assets and currencies without 3rd party involvement. Mining SDKs and APIs for In-app mobile and desktop platforms.
 				</div>
-				<div class="col s6 road-map-right-2">
+				<div class="col s12 m6 road-map-right-2 hide-on-small-only">
 					June 2019
 				</div>
 				<span class="map-pointer-container">
@@ -504,7 +556,7 @@
 		<div class="col s1 m1 hide-on-small-only">&nbsp;</div>
 	</div>
 
-	<div class="row wto-white-bg hide-on-small-only">
+	<div class="row wto-white-bg">
 		<div class="col s1">&nbsp;</div>
 		<div class="col s10 topgap40 section scrollspy" id="distribution">
 			<h5 class="text-center font-27">
@@ -513,17 +565,17 @@
 		</div>
 		<div class="col s1">&nbsp;</div>
 	</div>
-	<div class="row wto-white-bg hide-on-small-only">
-		<div class="col s1">&nbsp;</div>
-		<div class="col s10 topgap40">
+	<div class="row wto-white-bg">
+		<div class="col s1 m1 hide-on-small-only">&nbsp;</div>
+		<div class="col s12 m10 topgap40">
 			<div class="row">
-				<div class="col s1">&nbsp;</div>
-				<div class="col s10">
+				<div class="col s1 m1 hide-on-small-only">&nbsp;</div>
+				<div class="col s12 m10">
 					<div class="row">
-						<div class="col s6">
+						<div class="col s12 m6">
 							<canvas class="chart chart-doughnut" chart-data="mainData" chart-labels="mainLabels" chart-colours="mainColors" chart-options="mainOptions" chart-dataset-override="mainOverride" style="width:100%;"></canvas>
 						</div>
-						<div class="col s6">
+						<div class="col s12 m6">
 							<div class="topgap15">
 								<span class="distribution-pointer" style="background-color: #204f84"></span>
 								<span class="distribution-label">Crowdsale Investors</span>
@@ -553,24 +605,24 @@
 						</div>
 					</div>
 				</div>
-				<div class="col s1">&nbsp;</div>
+				<div class="col s1 m1 hide-on-small-only">&nbsp;</div>
 			</div>
 		</div>
-		<div class="col s1">&nbsp;</div>
+		<div class="col s1 m1 hide-on-small-only">&nbsp;</div>
 	</div>
 
-	<div class="row wto-white-bg hide-on-small-only">
-		<div class="col s1">&nbsp;</div>
-		<div class="col s10 topgap40">
+	<div class="row wto-white-bg">
+		<div class="col s1 m1 hide-on-small-only">&nbsp;</div>
+		<div class="col s12 m10 topgap40">
 			<h5 class="text-center font-27">
 				<span class="wto-distribution-title">STRUCTURAL BONUS</span>
 			</h5>
 		</div>
-		<div class="col s1">&nbsp;</div>
+		<div class="col s1 m1 hide-on-small-only">&nbsp;</div>
 	</div>
-	<div class="row wto-white-bg hide-on-small-only">
-		<div class="col s1">&nbsp;</div>
-		<div class="col s10 topgap30">
+	<div class="row wto-white-bg">
+		<div class="col s1 m1 hide-on-small-only">&nbsp;</div>
+		<div class="col s12 m10 topgap30">
 			<div class="structural-container relative">
 				<canvas class="chart chart-doughnut" chart-data="structure.data1" chart-colours="structure.colors" chart-options="structure.options" chart-dataset-override="structure.override" style="width:100%;"></canvas>
 				<span class="bonus-percent">25%</span>
@@ -597,22 +649,22 @@
 				<div class="bonus-title">LOT 4</div>
 			</div>
 		</div>
-		<div class="col s1">&nbsp;</div>
+		<div class="col s1 m1 hide-on-small-only">&nbsp;</div>
 	</div>
 
-	<div class="row wto-white-bg hide-on-small-only">
-		<div class="col s1">&nbsp;</div>
-		<div class="col s10 topgap40 section scrollspy" id="rewards">
+	<div class="row wto-white-bg">
+		<div class="col s1 m1 hide-on-small-only">&nbsp;</div>
+		<div class="col s12 m10 topgap40 section scrollspy" id="rewards">
 			<h5 class="text-center font-27">
 				<span class="wto-distribution-title">REWARDS & BOUNTIES*</span>
 			</h5>
 			<div class="rewards-sub">Percentage: X% out of 5% of total number of Tourcoins</div>
 		</div>
-		<div class="col s1">&nbsp;</div>
+		<div class="col s1 m1 hide-on-small-only">&nbsp;</div>
 	</div>
-	<div class="row wto-white-bg hide-on-small-only">
-		<div class="col s1">&nbsp;</div>
-		<div class="col s10 topgap40">
+	<div class="row wto-white-bg">
+		<div class="col s1 m1 hide-on-small-only">&nbsp;</div>
+		<div class="col s12 m10 topgap40">
 			<div>
 				<div class="structural-container relative">
 					<canvas class="chart chart-doughnut" chart-data="structure.data6" chart-colours="structure.colors" chart-options="structure.options" chart-dataset-override="structure.override" style="width:100%;"></canvas>
@@ -642,7 +694,7 @@
 			</div>
 			<div class="reward-bottom-text">* Investors with the highest number of referrals will be awarded tour package of their respective choice (T&C apply).</div>
 		</div>
-		<div class="col s1">&nbsp;</div>
+		<div class="col s1 m1 hide-on-small-only">&nbsp;</div>
 	</div>
 
 	<div class="row wto-white-bg">
@@ -667,7 +719,7 @@
 
 	<div class="row wto-white-bg">
 		<div class="col s1">&nbsp;</div>
-		<div class="col s10 wto-white-bg topgap30">
+		<div class="col s10 wto-white-bg topgap30 section scrollspy" id="client">
 			<h5 class="text-center font-27">
 				<span class="global-players">GLOBAL PLAYERS & MARKET MOVERS</span>
 			</h5>
@@ -770,10 +822,11 @@
 				</div>
 				<div class="col s12 text-center topgap30">
 					<span class="inline-block relative">
-						<input type="email" ng-model="mailId" placeholder="Email" class="wto-news-sub">
+						<input type="email" ng-change="validateEmail(mailId)" ng-model="mailId" placeholder="Email" class="wto-news-sub">
 						<img src="/img/email.svg" class="news-icon">
 						<span class="news-subscribe" ng-click="subscribeMail(mailId)">SUBSCRIBE</span>
 					</span>
+					<div class="font-10" style="color: red;margin-top: 4px;">{{errmsg}}</div>
 				</div>
 			</div>
 		</div>

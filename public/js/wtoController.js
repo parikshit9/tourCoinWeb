@@ -1,9 +1,15 @@
-worldTourApp.controller('wtoController', function($scope, $rootScope, $state, $timeout, $sce, $http, $window) {
+worldTourApp.controller('wtoController', function($scope, $rootScope, $state, $timeout, $sce, $http, $window, $stateParams) {
 	$scope.state = $state;
 	$(document).ready(function(){
 		$('.parallax').parallax();
 		$('.collapsible').collapsible();
 		$('.scrollspy').scrollSpy();
+        $(".dropdown-button").dropdown();
+        $(".button-collapse").sideNav(
+            {
+              closeOnClick: true // Closes side-nav on <a> clicks, useful for Angular/Meteor
+            }
+        );
 		$('.scrollspy').on('scrollSpy:enter', function() {
 			$('.wto-fixed-nav').find('a').removeClass('anchor-active');
 			$('.wto-fixed-nav').find('a[href="#'+$(this).attr('id')+'"]').addClass('anchor-active');
@@ -34,6 +40,15 @@ worldTourApp.controller('wtoController', function($scope, $rootScope, $state, $t
 	    hoverBackgroundColor: ["#204f84","#53a8e2","#50e3c2","#dbecf8"],
 	    hoverBorderColor: ["#204f84","#53a8e2","#50e3c2","#dbecf8"]
 	};
+
+    $scope.validateEmail = function(email) {
+        var re = /^(([^<>()[\]\\.,;:\s@\"]+(\.[^<>()[\]\\.,;:\s@\"]+)*)|(\".+\"))@((\[[0-9]{1,3}\.[0-9]{1,3}\.[0-9]{1,3}\.[0-9]{1,3}\])|(([a-zA-Z\-0-9]+\.)+[a-zA-Z]{2,}))$/;
+        if (re.test(email)) {
+            $scope.errmsg = '';
+        }else{
+            $scope.errmsg = 'Invalid Email';
+        }
+    }
 
 	$scope.structure = {};
 	$scope.structure.data1 = [25,75];
@@ -119,8 +134,9 @@ worldTourApp.controller('wtoController', function($scope, $rootScope, $state, $t
         document.getElementById('countdown-mn').innerHTML = ('0'+minutes).slice(-2);
         document.getElementById('countdown-sc').innerHTML = ('0'+seconds).slice(-2);
     }
-
-    timer = setInterval(showRemaining, 1000);
+    if ($state.current.name == 'home') {
+    	timer = setInterval(showRemaining, 1000);
+    }
 
     $rootScope.forgotMail;
 
@@ -144,5 +160,74 @@ worldTourApp.controller('wtoController', function($scope, $rootScope, $state, $t
     	function error(err){
     		alert(err);
     	}
+    }
+
+    if ($state.current.name == 'resetPassword') {
+    	console.log($stateParams.token);
+    }
+
+    $scope.reset = {};
+
+    $scope.resetPassword = function(){
+    	var postObj = {};
+    	postObj.forgotPwdToken = $stateParams.token;
+    	postObj.newPassword = $scope.reset.password;
+
+    	console.log(postObj);
+
+        var re = /^(?=.*[a-z])(?=.*[A-Z])(?=.*\d)(?=.*[#$@$!%*?&])[A-Za-z\d#$@$!%*?&]{8,}/;
+        if (re.test($scope.registerObj.userPassword)) {
+            $scope.pwdErrMsg = '';
+            // $http.post('http://api.worldtourism.io:8080/tourcoins/resetPassword',postObj).then(success,error);
+            $http.post('https://api.worldtourism.io/tourcoins/resetPassword',postObj).then(success,error);
+
+            function success(res){
+                console.log(res);
+                if (res.data.success) {
+                    Materialize.toast(res.data.success, 3000);
+                    $state.go('passwordChanged');
+                }else if(res.data.error){
+                    Materialize.toast(res.data.error, 3000);
+                }
+            }
+
+            function error(err){
+                alert(err);
+            }
+
+        }else{
+            $scope.pwdErrMsg = 'Password should be atleast 8 characters, Must contain at least one capital & small letter, one number and a special character';
+        }
+    }
+
+    $scope.comparePass = function(){
+        if ($scope.registerObj.pass !== $scope.registerObj.userPassword) {
+            $scope.matchError = "Passwords don't match";
+        }else{
+            $scope.matchError = '';
+        }
+    }
+
+    $scope.contact = {};
+
+    $scope.contactUs = function(){
+        var postObj = angular.copy($scope.contact);
+
+        // $http.post('http://api.worldtourism.io:8080/tourcoins/contactUs',postObj).then(success,error);
+        $http.post('https://api.worldtourism.io/tourcoins/contactUs',postObj).then(success,error);
+
+        function success(res){
+            console.log(res);
+            if (res.data.success) {
+                Materialize.toast('Your Message has been successfully sent!', 3000);
+                $scope.contact = {};
+            }else if(res.data.error){
+                Materialize.toast(res.data.error, 3000);
+            }
+        }
+
+        function error(err){
+            console.log(err);
+        }
     }
 });

@@ -246,6 +246,15 @@ html,body {
 .label-white{
 	color: #fff;
 }
+.big-sub-label{
+	color: #fff;
+}
+.big-sub-label:hover{
+	color: #05E7E6;
+}
+.inline-block{
+	display: inline-block;
+}
 video { 
 	position: absolute;
 	top: 50%;
@@ -586,14 +595,14 @@ input:focus{
 	padding-right: 58px!important;
 }
 .road-map-right-1{
-	font-size: 12px;
+	font-size: 13px;
 	color: #fff;
 	line-height: 1.5;
 	padding-right: 58px!important;
 	padding-left: 58px!important;
 }
 .road-map-left-2{
-	font-size: 12px;
+	font-size: 13px;
 	color: #fff;
 	line-height: 1.5;
 	padding-right: 58px!important;
@@ -766,6 +775,9 @@ input:focus{
 	background-color: transparent!important;
 	background-image: none!important;
 	border-bottom: 3px solid #eaeaea;
+}
+.wto-anchor:hover{
+	color: #dad2d2;
 }
 .anchor-active{
 	border-color: #50e3c2;
@@ -961,6 +973,50 @@ input:focus{
 	border-bottom: 5px solid #05e7e6;
 	padding: 10px;
 }
+.wallet-input{
+	width: 350px!important;
+	height: 40px!important;
+	border-radius: 56px!important;
+	background-color: #f7f7fa!important;
+	border: solid 1px #eaeaea!important;
+	font-size: 14px!important;
+	font-weight: 300!important;
+	text-align: left!important;
+	color: #4a4a4a!important;
+	position: relative!important;
+	padding: 0 110px 0 15px!important;
+}
+.send-wallet-btn{
+	position: absolute;
+	top: 28px;
+	right: 28px;
+	width: 82px;
+	height: 26px;
+	border-radius: 99px;
+	background-color: #eaeaea;
+	font-size: 12px;
+	font-weight: 500;
+	text-align: center;
+	color: #232e42;
+	display: flex;
+	align-items: center;
+	justify-content: center;
+	cursor: pointer;
+}
+.log-icon{
+	font-size: 24px; 
+	height: auto!important; 
+	line-height: initial!important; 
+	vertical-align: top!important;
+	display: inline-block!important;
+	margin-left: 5px!important;
+	margin-top: -4px!important;
+}
+.wto-pricing{
+	position: absolute;
+	bottom: 70px;
+	right: 0;
+}
 /*materiaze override*/
 #toast-container{
 	top: 0!important;
@@ -1060,6 +1116,42 @@ input:not([type]).invalid+label:after, input:not([type]):focus.invalid+label:aft
 	}
 	.wto-presell{
 		margin-top: 100px;
+	}
+	.map-middle-border {
+	    top: 50%;
+	    left: 10%;
+	}
+	.map-pointer-container{
+		left: 8%;
+	}
+	.road-map-flex{
+		display: block;
+	}
+	.road-map-left-1{
+		text-align: left;
+	    padding-left: 58px!important;
+        padding-right: 0px!important;
+	}
+	.structural-container{
+		width: 49%;
+		display: inline-block;
+		margin-top: 20px;
+	}
+	.crew-member-container{
+		width: 49%;
+		margin-top: 15px;
+	}
+	.crew-header{
+		background-size: contain;
+	}
+	.member-margin-left-1{
+		margin-left: 0;
+	}
+	.member-margin-left-2{
+		margin-left: 0;
+	}
+	.dash-percent-blocks{
+		width: 33%;
 	}
 }
 
