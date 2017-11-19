@@ -33,7 +33,7 @@ worldTourApp.config(function($httpProvider, $stateProvider, $urlRouterProvider, 
             controller: "wtoLogInCtrl"
         })
         .state("signup", {
-            url: "/signup",
+            url: "/signup/:token",
             templateUrl: "/views/signup.html",
             controller: "wtoSignUpCtrl"
         })
@@ -75,6 +75,11 @@ worldTourApp.config(function($httpProvider, $stateProvider, $urlRouterProvider, 
         .state("contactUs", {
             url: "/contactus",
             templateUrl: "/views/contactUs.html",
+            controller: "wtoController"
+        })
+        .state("inquiry", {
+            url: "/inquiry",
+            templateUrl: "/views/inquiry.html",
             controller: "wtoController"
         })
         .state("dashboard", {

@@ -94,10 +94,10 @@ worldTourApp.controller('wtoController', function($scope, $rootScope, $state, $t
 		function success(res){
 			console.log(res);
 			if (res.data.success) {
-				Materialize.toast('Subscribed Succesfully!', 3000);
+				Materialize.toast('Email ID subscribed successfully', 3000);
 				$scope.mailId = null;
 			}else if(res.data.error){
-				Materialize.toast('Mail Id Already Subscribed!', 3000);
+				Materialize.toast('Email ID already subscribed!', 3000);
 			}
 		}
 
@@ -138,11 +138,11 @@ worldTourApp.controller('wtoController', function($scope, $rootScope, $state, $t
     	timer = setInterval(showRemaining, 1000);
     }
 
-    $rootScope.forgotMail;
+    $scope.forgot = {};
 
     $scope.sendResetLink = function(){
     	var postObj = {};
-    	postObj.userEmail = $rootScope.forgotMail;
+    	postObj.userEmail = $scope.forgot.mail;
 
     	// $http.post('http://api.worldtourism.io:8080/tourcoins/forgotPassword',postObj).then(success,error);
     	$http.post('https://api.worldtourism.io/tourcoins/forgotPassword',postObj).then(success,error);
@@ -151,6 +151,7 @@ worldTourApp.controller('wtoController', function($scope, $rootScope, $state, $t
     		console.log(res);
     		if (res.data.success) {
     			Materialize.toast(res.data.success, 3000);
+                $rootScope.fm = angular.copy($scope.forgot.email);
     			$state.go('resetInstructions');
     		}else if(res.data.error){
     			Materialize.toast(res.data.error, 3000);
@@ -221,6 +222,7 @@ worldTourApp.controller('wtoController', function($scope, $rootScope, $state, $t
             if (res.data.success) {
                 Materialize.toast('Your Message has been successfully sent!', 3000);
                 $scope.contact = {};
+                $state.go('inquiry')
             }else if(res.data.error){
                 Materialize.toast(res.data.error, 3000);
             }

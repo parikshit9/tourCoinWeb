@@ -40,6 +40,11 @@ html,body {
 	font-size-adjust: 0.5 !important;
 }
 
+.disable-class button[disabled]{
+	opacity: 0.5;
+	cursor: not-allowed;
+}
+
 /*custom padding*/
 
 .no-padding{
@@ -921,6 +926,8 @@ input:focus{
 	text-align: center;
 	color: #ffffff;
 	cursor: pointer;
+	border:none;
+	box-shadow: none;
 }
 .g-recaptcha>div{
 	margin-left: 50%;
@@ -1024,6 +1031,12 @@ input:focus{
 	right: 0!important;
 	width: 100%!important;
 	max-width: 100%!important;
+}
+.toast{
+	background-color: #05e7e6!important;
+	font-weight: normal!important;
+	color: #fff!important;
+	justify-content: center!important;
 }
 input:not([type]).invalid+label:after, input:not([type]):focus.invalid+label:after, input[type=text]:not(.browser-default).invalid+label:after, input[type=text]:not(.browser-default):focus.invalid+label:after, input[type=password]:not(.browser-default).invalid+label:after, input[type=password]:not(.browser-default):focus.invalid+label:after, input[type=email]:not(.browser-default).invalid+label:after, input[type=email]:not(.browser-default):focus.invalid+label:after, input[type=url]:not(.browser-default).invalid+label:after, input[type=url]:not(.browser-default):focus.invalid+label:after, input[type=time]:not(.browser-default).invalid+label:after, input[type=time]:not(.browser-default):focus.invalid+label:after, input[type=date]:not(.browser-default).invalid+label:after, input[type=date]:not(.browser-default):focus.invalid+label:after, input[type=datetime]:not(.browser-default).invalid+label:after, input[type=datetime]:not(.browser-default):focus.invalid+label:after, input[type=datetime-local]:not(.browser-default).invalid+label:after, input[type=datetime-local]:not(.browser-default):focus.invalid+label:after, input[type=tel]:not(.browser-default).invalid+label:after, input[type=tel]:not(.browser-default):focus.invalid+label:after, input[type=number]:not(.browser-default).invalid+label:after, input[type=number]:not(.browser-default):focus.invalid+label:after, input[type=search]:not(.browser-default).invalid+label:after, input[type=search]:not(.browser-default):focus.invalid+label:after, textarea.materialize-textarea.invalid+label:after, textarea.materialize-textarea:focus.invalid+label:after, .select-wrapper.invalid+label:after{
     transform: translateY(20px)!important;

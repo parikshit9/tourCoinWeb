@@ -22,6 +22,37 @@ worldTourApp.controller('wtoDashboardCtrl', function($scope, $rootScope, $state,
 		// });
     });
 
+    var end = new Date('12/01/2017 12:00 AM');
+
+    var _second = 1000;
+    var _minute = _second * 60;
+    var _hour = _minute * 60;
+    var _day = _hour * 24;
+    var timer;
+
+    function showRemaining() {
+        var now = new Date();
+        var distance = end - now;
+        if (distance < 0) {
+
+            clearInterval(timer);
+            document.getElementById('countdown').innerHTML = 'EXPIRED!';
+
+            return;
+        }
+        var days = Math.floor(distance / _day);
+        var hours = Math.floor((distance % _day) / _hour);
+        var minutes = Math.floor((distance % _hour) / _minute);
+        var seconds = Math.floor((distance % _minute) / _second);
+
+        document.getElementById('countdash-dy').innerHTML = ('0'+days).slice(-2);
+        document.getElementById('countdash-hr').innerHTML = ('0'+hours).slice(-2);
+        document.getElementById('countdash-mn').innerHTML = ('0'+minutes).slice(-2);
+        document.getElementById('countdash-sc').innerHTML = ('0'+seconds).slice(-2);
+    }
+    timer = setInterval(showRemaining, 1000);
+    
+
 	$scope.fetchData = function(){
 		var postObj = {};
 		postObj.userId = $scope.userData.userId;
@@ -45,6 +76,8 @@ worldTourApp.controller('wtoDashboardCtrl', function($scope, $rootScope, $state,
 				}else{
 					$scope.ethFlag = true;
 				}
+				$scope.editBtcMode = false;
+				$scope.editEthMode = false;
 			}
 		}
 
@@ -87,5 +120,45 @@ worldTourApp.controller('wtoDashboardCtrl', function($scope, $rootScope, $state,
 		function error(err){
 			console.log(err);
 		}
+	}
+	$scope.edit = {};
+	$scope.showEdit = function(id){
+		if (id == "BTC") {
+			$scope.editBtcMode = true;
+			$scope.edit.btcWallet = angular.copy($scope.dashData.userWallet.bitcoin.walletId);	
+		}else if (id == "ETH") {
+			$scope.editEthMode = true;
+			$scope.edit.ethWallet = angular.copy($scope.dashData.userWallet.eherium.walletId);
+		}
+	}
+
+	$scope.editWalletId = function(type,id){
+		var postObj = {};
+		postObj.userId = $scope.userData.userId;
+		postObj.currencyType = type;
+		if (type == 'ETH') {
+			postObj.ethWalletId = id;
+		}else if(type == 'BITCOIN'){
+			postObj.bitcoinWalletId = id;
+		}
+
+		// $http.post('http://api.worldtourism.io:8080/tourcoins/editWalletId',postObj).then(success,error);
+		$http.post('https://api.worldtourism.io/tourcoins/editWalletId',postObj).then(success,error);
+
+		function success(res){
+			console.log(res);
+			if (res.data.success) {
+				Materialize.toast('Wallet Id Updated Successfully', 3000);
+			}
+			$scope.fetchData();
+		}
+
+		function error(err){
+			console.log(err);
+		}
+	}
+
+	$scope.refer = function(){
+		$scope.showLink = true;
 	}
 });
