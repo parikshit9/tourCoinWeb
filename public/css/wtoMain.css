@@ -1024,6 +1024,9 @@ input:focus{
 	bottom: 70px;
 	right: 0;
 }
+.width-override{
+	width:450px!important;
+}
 /*materiaze override*/
 #toast-container{
 	top: 0!important;
@@ -1165,6 +1168,12 @@ input:not([type]).invalid+label:after, input:not([type]):focus.invalid+label:aft
 	}
 	.dash-percent-blocks{
 		width: 33%;
+	}
+	.wallet-input{
+		width: 192px!important;
+	}
+	.width-override{
+		width:277px!important;
 	}
 }
 
