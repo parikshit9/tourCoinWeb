@@ -33,6 +33,10 @@
     font-weight: 100;
     src: url("/fonts/Montserrat-Thin.otf") format("opentype");
 }
+@font-face {
+    font-family: BebasNeue;
+    src: url("/fonts/BebasNeue.otf") format("opentype");
+}
 
 html,body {
 	font-family: Montserrat!important;
@@ -344,6 +348,9 @@ video {
 	letter-spacing: 2.8px;
 	text-align: center;
 	color: #ffffff;
+	font-family: BebasNeue!important;
+	-webkit-font-smoothing: antialiased;
+	font-size: 40px;
 }
 .wto-dhms{
 	font-size: 10px;
@@ -1027,6 +1034,10 @@ input:focus{
 .width-override{
 	width:450px!important;
 }
+.wto-news-sub:focus{
+	border-color: aquamarine!important;
+	box-shadow: none!important;
+}
 /*materiaze override*/
 #toast-container{
 	top: 0!important;
@@ -1040,6 +1051,7 @@ input:focus{
 	font-weight: normal!important;
 	color: #fff!important;
 	justify-content: center!important;
+	margin-top: 0!important;
 }
 input:not([type]).invalid+label:after, input:not([type]):focus.invalid+label:after, input[type=text]:not(.browser-default).invalid+label:after, input[type=text]:not(.browser-default):focus.invalid+label:after, input[type=password]:not(.browser-default).invalid+label:after, input[type=password]:not(.browser-default):focus.invalid+label:after, input[type=email]:not(.browser-default).invalid+label:after, input[type=email]:not(.browser-default):focus.invalid+label:after, input[type=url]:not(.browser-default).invalid+label:after, input[type=url]:not(.browser-default):focus.invalid+label:after, input[type=time]:not(.browser-default).invalid+label:after, input[type=time]:not(.browser-default):focus.invalid+label:after, input[type=date]:not(.browser-default).invalid+label:after, input[type=date]:not(.browser-default):focus.invalid+label:after, input[type=datetime]:not(.browser-default).invalid+label:after, input[type=datetime]:not(.browser-default):focus.invalid+label:after, input[type=datetime-local]:not(.browser-default).invalid+label:after, input[type=datetime-local]:not(.browser-default):focus.invalid+label:after, input[type=tel]:not(.browser-default).invalid+label:after, input[type=tel]:not(.browser-default):focus.invalid+label:after, input[type=number]:not(.browser-default).invalid+label:after, input[type=number]:not(.browser-default):focus.invalid+label:after, input[type=search]:not(.browser-default).invalid+label:after, input[type=search]:not(.browser-default):focus.invalid+label:after, textarea.materialize-textarea.invalid+label:after, textarea.materialize-textarea:focus.invalid+label:after, .select-wrapper.invalid+label:after{
     transform: translateY(20px)!important;
@@ -1174,6 +1186,10 @@ input:not([type]).invalid+label:after, input:not([type]):focus.invalid+label:aft
 	}
 	.width-override{
 		width:277px!important;
+	}
+	.login-bg{
+		background-image: none;
+		background-color: #fff;
 	}
 }
 

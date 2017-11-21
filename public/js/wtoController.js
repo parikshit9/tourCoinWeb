@@ -176,28 +176,21 @@ worldTourApp.controller('wtoController', function($scope, $rootScope, $state, $t
 
     	console.log(postObj);
 
-        var re = /^(?=.*[a-z])(?=.*[A-Z])(?=.*\d)(?=.*[#$@$!%*?&])[A-Za-z\d#$@$!%*?&]{8,}/;
-        if (re.test($scope.registerObj.userPassword)) {
-            $scope.pwdErrMsg = '';
-            // $http.post('http://api.worldtourism.io:8080/tourcoins/resetPassword',postObj).then(success,error);
-            $http.post('https://api.worldtourism.io/tourcoins/resetPassword',postObj).then(success,error);
+        // $http.post('http://api.worldtourism.io:8080/tourcoins/resetPassword',postObj).then(success,error);
+        $http.post('https://api.worldtourism.io/tourcoins/resetPassword',postObj).then(success,error);
 
-            function success(res){
-                console.log(res);
-                if (res.data.success) {
-                    Materialize.toast(res.data.success, 3000);
-                    $state.go('passwordChanged');
-                }else if(res.data.error){
-                    Materialize.toast(res.data.error, 3000);
-                }
+        function success(res){
+            console.log(res);
+            if (res.data.success) {
+                Materialize.toast(res.data.success, 3000);
+                $state.go('passwordChanged');
+            }else if(res.data.error){
+                Materialize.toast(res.data.error, 3000);
             }
+        }
 
-            function error(err){
-                alert(err);
-            }
-
-        }else{
-            $scope.pwdErrMsg = 'Password should be atleast 8 characters, Must contain at least one capital & small letter, one number and a special character';
+        function error(err){
+            alert(err);
         }
     }
 
@@ -206,6 +199,24 @@ worldTourApp.controller('wtoController', function($scope, $rootScope, $state, $t
             $scope.matchError = "Passwords don't match";
         }else{
             $scope.matchError = '';
+        }
+    }
+
+    $scope.compareResetPass = function(){
+        if ($scope.reset.password !== $scope.reset.confPassword) {
+            $scope.resetMatchError = "Passwords don't match";
+        }else{
+            $scope.resetMatchError = '';
+        }
+    }
+
+    $scope.resetPasswordCheck = function(){
+        var re = /^(?=.*[a-z])(?=.*[A-Z])(?=.*\d)(?=.*[#$@$!%*?&])[A-Za-z\d#$@$!%*?&]{8,}/;
+        if (re.test($scope.reset.password)) {
+            $scope.resetPwdErrMsg = '';
+            $scope.compareResetPass();
+        }else{
+            $scope.resetPwdErrMsg = 'Password should be atleast 8 characters, Must contain at least one capital & small letter, one number and a special character';
         }
     }
 

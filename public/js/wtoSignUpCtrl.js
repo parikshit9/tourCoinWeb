@@ -48,6 +48,7 @@ worldTourApp.controller('wtoSignUpCtrl', function($scope, $rootScope, $state, $t
 		var re = /^(?=.*[a-z])(?=.*[A-Z])(?=.*\d)(?=.*[#$@$!%*?&])[A-Za-z\d#$@$!%*?&]{8,}/;
         if (re.test($scope.registerObj.userPassword)) {
             $scope.pwdErrMsg = '';
+            $scope.comparePass();
         }else{
             $scope.pwdErrMsg = 'Password should be atleast 8 characters, Must contain at least one capital & small letter, one number and a special character';
         }

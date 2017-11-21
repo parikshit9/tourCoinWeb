@@ -101,3 +101,9 @@ worldTourApp.config(['ChartJsProvider', function (ChartJsProvider) {
         showLines: false
     });
 }])
+
+worldTourApp.run(["$rootScope", "$anchorScroll" , function ($rootScope, $anchorScroll) {
+    $rootScope.$on("$locationChangeSuccess", function() {
+        $anchorScroll();
+    });
+}]);
