@@ -96,29 +96,33 @@ worldTourApp.controller('wtoDashboardCtrl', function($scope, $rootScope, $state,
 	console.log($scope.userData);
 
 	$scope.addWalletId = function(type,id){
-		var postObj = {};
-		postObj.userId = $scope.userData.userId;
-		postObj.currencyType = type;
-		postObj.bitcoinWalletId = id;
-		if (type == 'ETH') {
-			postObj.ethWalletId = id;
-		}else if(type == 'BITCOIN'){
+		if (id.length == 0 || id == null) {
+			Materialize.toast('Field Cant be empty', 3000);
+		}else{
+			var postObj = {};
+			postObj.userId = $scope.userData.userId;
+			postObj.currencyType = type;
 			postObj.bitcoinWalletId = id;
-		}
-
-		// $http.post('http://api.worldtourism.io:8080/tourcoins/saveWalletId',postObj).then(success,error);
-		$http.post('https://api.worldtourism.io/tourcoins/saveWalletId',postObj).then(success,error);
-
-		function success(res){
-			console.log(res);
-			if (res.data.success) {
-				Materialize.toast('Wallet Id Added Successfully', 3000);
+			if (type == 'ETH') {
+				postObj.ethWalletId = id;
+			}else if(type == 'BITCOIN'){
+				postObj.bitcoinWalletId = id;
 			}
-			$scope.fetchData();
-		}
 
-		function error(err){
-			console.log(err);
+			// $http.post('http://api.worldtourism.io:8080/tourcoins/saveWalletId',postObj).then(success,error);
+			$http.post('https://api.worldtourism.io/tourcoins/saveWalletId',postObj).then(success,error);
+
+			function success(res){
+				console.log(res);
+				if (res.data.success) {
+					Materialize.toast('Wallet Id Added Successfully', 3000);
+				}
+				$scope.fetchData();
+			}
+
+			function error(err){
+				console.log(err);
+			}
 		}
 	}
 	$scope.edit = {};
