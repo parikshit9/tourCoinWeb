@@ -15,7 +15,7 @@ worldTourApp.controller('wtoLogInCtrl', function($scope, $rootScope, $state, $ti
 				$window.localStorage.wtoUserData = JSON.stringify(res.data.userData);
 				$state.go('dashboard');
 			}else if(res.data.error){
-				Materialize.toast(res.data.error, 3000);
+				$scope.loginError = res.data.error;
 			}
 		}
 

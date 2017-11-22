@@ -368,7 +368,7 @@ video {
 	margin: 0!important;
 	position: relative!important;
 	font-size: 12px!important;
-	width: 265px!important;
+	width: 114%!important;
 }
 .wto-mail-sub{
 	width: 250px!important;
@@ -775,7 +775,7 @@ input:focus{
 	float: right;
 }
 .wto-anchor{
-	padding: 14px 18px;
+	padding: 14px 14px;
 	line-height: initial;
 	opacity: 0.5;
 	font-family: Montserrat;
@@ -988,7 +988,7 @@ input:focus{
 	padding: 10px;
 }
 .wallet-input{
-	width: 350px!important;
+	width: 74%!important;
 	height: 40px!important;
 	border-radius: 56px!important;
 	background-color: #f7f7fa!important;
@@ -1052,6 +1052,9 @@ input:focus{
 	color: #fff!important;
 	justify-content: center!important;
 	margin-top: 0!important;
+}
+.dropdown-content li:hover, .dropdown-content li.active, .dropdown-content li.selected, nav ul a:hover{
+	background-color: inherit!important;
 }
 input:not([type]).invalid+label:after, input:not([type]):focus.invalid+label:after, input[type=text]:not(.browser-default).invalid+label:after, input[type=text]:not(.browser-default):focus.invalid+label:after, input[type=password]:not(.browser-default).invalid+label:after, input[type=password]:not(.browser-default):focus.invalid+label:after, input[type=email]:not(.browser-default).invalid+label:after, input[type=email]:not(.browser-default):focus.invalid+label:after, input[type=url]:not(.browser-default).invalid+label:after, input[type=url]:not(.browser-default):focus.invalid+label:after, input[type=time]:not(.browser-default).invalid+label:after, input[type=time]:not(.browser-default):focus.invalid+label:after, input[type=date]:not(.browser-default).invalid+label:after, input[type=date]:not(.browser-default):focus.invalid+label:after, input[type=datetime]:not(.browser-default).invalid+label:after, input[type=datetime]:not(.browser-default):focus.invalid+label:after, input[type=datetime-local]:not(.browser-default).invalid+label:after, input[type=datetime-local]:not(.browser-default):focus.invalid+label:after, input[type=tel]:not(.browser-default).invalid+label:after, input[type=tel]:not(.browser-default):focus.invalid+label:after, input[type=number]:not(.browser-default).invalid+label:after, input[type=number]:not(.browser-default):focus.invalid+label:after, input[type=search]:not(.browser-default).invalid+label:after, input[type=search]:not(.browser-default):focus.invalid+label:after, textarea.materialize-textarea.invalid+label:after, textarea.materialize-textarea:focus.invalid+label:after, .select-wrapper.invalid+label:after{
     transform: translateY(20px)!important;
