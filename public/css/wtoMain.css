@@ -546,6 +546,10 @@ input:focus{
 	color: #4a4a4a;
 }
 .brand-imgs img{
+	width: 100%;
+	height: auto;
+}
+.counter-imgs img{
 	width: 15%;
 	height: auto;
 }
@@ -1193,6 +1197,10 @@ input:not([type]).invalid+label:after, input:not([type]):focus.invalid+label:aft
 	.login-bg{
 		background-image: none;
 		background-color: #fff;
+	}
+	.counter-imgs img{
+		width: 28%;
+		height: auto;
 	}
 }
 

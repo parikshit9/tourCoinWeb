@@ -20,6 +20,52 @@ worldTourApp.controller('wtoController', function($scope, $rootScope, $state, $t
 		// });
     });
 
+    $(document).ready(function(){
+        $('.slick-car-1').slick({
+            slidesToShow: 6,
+            slidesToScroll: 1,
+            autoplay: true,
+            autoplaySpeed: 2000,
+            arrows: false
+        });
+        $('.slick-car-2').slick({
+            autoplay: true,
+            autoplaySpeed: 2000,
+            slidesToShow: 4,
+            slidesToScroll: 1,
+            arrows: false,
+            rtl: true
+        });
+        $('.slick-car-3').slick({
+            slidesToShow: 3,
+            slidesToScroll: 1,
+            autoplay: true,
+            autoplaySpeed: 2000,
+            arrows: false
+        });
+        $('.slick-car-4').slick({
+            autoplay: true,
+            autoplaySpeed: 2000,
+            slidesToShow: 3,
+            slidesToScroll: 1,
+            arrows: false,
+            rtl: true
+        });
+    });
+
+    $(document).ready(function(){
+        $timeout(function(){
+            $scope.showAd = true;
+            $timeout(function(){
+                $scope.showAd = false;
+            },6000)
+        },30000)
+    })
+
+    $scope.closeAd = function(){
+        $scope.showAd = false;
+    }
+
 	$scope.mainLabels = ["Crowdsale Investors", "Bounty & rewards", "Founders", "Research and Promotion"];
 	$scope.mainData = [70, 5, 10, 15];
 	$scope.mainColors = ["#204f84","#53a8e2","#50e3c2","#dbecf8"];
