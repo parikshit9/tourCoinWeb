@@ -87,6 +87,11 @@ worldTourApp.config(function($httpProvider, $stateProvider, $urlRouterProvider, 
             templateUrl: "/views/dashboard.html",
             controller: "wtoDashboardCtrl"
         })
+        .state("dashboard_1", {
+            url: "/dashboard_1",
+            templateUrl: "/views/dashboard-1.html",
+            controller: "wtoDashboardCtrl"
+        })
     // $locationProvider.html5Mode(true);
 });
 

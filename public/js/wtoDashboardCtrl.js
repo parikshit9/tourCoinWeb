@@ -39,6 +39,8 @@ worldTourApp.controller('wtoDashboardCtrl', function($scope, $rootScope, $state,
             document.getElementById('countdown').innerHTML = 'EXPIRED!';
 
             return;
+        }else if ($state.current.name != 'dashboard') {
+        	clearInterval(timer);
         }
         var days = Math.floor(distance / _day);
         var hours = Math.floor((distance % _day) / _hour);
@@ -164,5 +166,30 @@ worldTourApp.controller('wtoDashboardCtrl', function($scope, $rootScope, $state,
 
 	$scope.refer = function(){
 		$scope.showLink = true;
+	}
+
+	$scope.copyRefer = function(){
+		var copyText = document.getElementById("referLink");
+		copyText.select();
+		document.execCommand("Copy");
+		Materialize.toast('Copied referral link!', 3000);
+	}
+
+	$scope.copyEth = function(){
+		var eth = document.getElementById("ethId");
+		eth.select();
+		document.execCommand("Copy");
+		Materialize.toast('Copied Wallet Id!', 3000);
+	}
+
+	$scope.copyBtc = function(){
+		var btc = document.getElementById("btcId");
+		btc.select();
+		document.execCommand("Copy");
+		Materialize.toast('Copied Wallet Id!', 3000);
+	}
+
+	$scope.addCheck = function(){
+		Materialize.toast('Please Add Your Respective Wallet Id First!', 3000);
 	}
 });
