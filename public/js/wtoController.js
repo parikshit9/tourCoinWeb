@@ -56,9 +56,6 @@ worldTourApp.controller('wtoController', function($scope, $rootScope, $state, $t
     $(document).ready(function(){
         $timeout(function(){
             $scope.showAd = true;
-            $timeout(function(){
-                $scope.showAd = false;
-            },6000)
         },30000)
     })
 
