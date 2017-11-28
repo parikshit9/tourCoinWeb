@@ -192,4 +192,21 @@ worldTourApp.controller('wtoDashboardCtrl', function($scope, $rootScope, $state,
 	$scope.addCheck = function(){
 		Materialize.toast('Please Add Your Respective Wallet Id First!', 3000);
 	}
+
+	function fetchTransactions(){
+		$http.get('https://api.worldtourism.io/tourcoins/transactionDetails/57').then(success,error);
+
+		function success(res){
+			console.log(res);
+			$scope.transactionDetails = res.data.response;
+			$timeout(function(){
+				fetchTransactions();
+			},50000);
+		}
+
+		function error(err){
+			console.log(err);
+		}
+	}
+	fetchTransactions();	
 });

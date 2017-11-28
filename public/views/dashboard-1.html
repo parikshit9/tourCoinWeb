@@ -155,7 +155,7 @@
 					</div>
 				</div>
 
-				<div class="col s12 m12 hide-on-small-only" style="display: none;">
+				<div class="col s12 m12 hide-on-small-only" ng-if="transactionDetails.length>0">
 					<div class="dash-block-2 topgap10" style="padding: 0;">
 						<div class="row" style="border-bottom: 1px solid #eaeaea;padding: 20px;margin:0">
 							<div class="col s2 m2 font-15 font-weight-500 label-grey">Date</div>
@@ -163,11 +163,11 @@
 							<div class="col s2 m2 font-15 font-weight-500 label-grey">Status</div>
 							<div class="col s2 m2 font-15 font-weight-500 label-grey">Amount</div>
 						</div>
-						<div class="row" style="padding: 20px;">
-							<div class="col s2 m2 font-14 label-grey">10 Jun 2017</div>
-							<div class="col s6 m6 font-14 label-grey">Received 20 ETH</div>
-							<div class="col s2 m2 font-14 label-grey">Unconfirmed</div>
-							<div class="col s2 m2 font-14 label-grey">20 ETH</div>
+						<div class="row" style="padding: 20px;" ng-repeat="data in transactionDetails">
+							<div class="col s2 m2 font-14 label-grey">{{data.transactionTime}}</div>
+							<div class="col s6 m6 font-14 label-grey">Received {{data.currencyTransferredToCompany}} {{data.ethereumWalletId == '' ? 'BTC' : 'ETH'}} From {{data.bitcoinWalletId}}{{data.ethereumWalletId}}</div>
+							<div class="col s2 m2 font-14 label-grey">{{data.status == 1 ? 'Confirmed' : 'Unconfirmed'}}</div>
+							<div class="col s2 m2 font-14 label-grey">{{data.currencyTransferredToCompany}} {{data.ethereumWalletId == '' ? 'BTC' : 'ETH'}}</div>
 						</div>
 					</div>
 				</div>
