@@ -194,7 +194,8 @@ worldTourApp.controller('wtoDashboardCtrl', function($scope, $rootScope, $state,
 	}
 
 	function fetchTransactions(){
-		$http.get('https://api.worldtourism.io/tourcoins/transactionDetails/57').then(success,error);
+		var url = "https://api.worldtourism.io/tourcoins/transactionDetails/" + $scope.userData.userId;
+		$http.get(url).then(success,error);
 
 		function success(res){
 			console.log(res);
