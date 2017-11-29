@@ -1,6 +1,6 @@
 worldTourApp.controller('wtoSignUpCtrl', function($scope, $rootScope, $state, $timeout, $sce, $http, $window, $stateParams) {
 	$scope.state = $state;
-	console.log('signUp ctrl');
+	// console.log('signUp ctrl');
 
 	$scope.registerObj = {};
 
@@ -13,13 +13,13 @@ worldTourApp.controller('wtoSignUpCtrl', function($scope, $rootScope, $state, $t
 			postObj.userReferralToken = "";
 		}
 
-		console.log(postObj);
+		// console.log(postObj);
 
 		// $http.post('http://api.worldtourism.io:8080/tourcoins/createAccount',postObj).then(success,error);
 		$http.post('https://api.worldtourism.io/tourcoins/createAccount',postObj).then(success,error);
 
 		function success(res){
-			console.log("res",res);
+			// console.log("res",res);
 			if (res.data.success) {
 				$state.go('verify');
 			}else if(res.data.error == "verify email"){

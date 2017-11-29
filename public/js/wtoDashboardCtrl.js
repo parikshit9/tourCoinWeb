@@ -1,6 +1,6 @@
 worldTourApp.controller('wtoDashboardCtrl', function($scope, $rootScope, $state, $timeout, $sce, $http, $window) {
 	$scope.state = $state;
-	console.log('Dashboard ctrl');
+	// console.log('Dashboard ctrl');
 
 	$(document).ready(function(){
 		$('.parallax').parallax();
@@ -59,13 +59,13 @@ worldTourApp.controller('wtoDashboardCtrl', function($scope, $rootScope, $state,
 		var postObj = {};
 		postObj.userId = $scope.userData.userId;
 
-		console.log(postObj);
+		// console.log(postObj);
 
 		// $http.post('http://api.worldtourism.io:8080/tourcoins/dataOnDashboard',postObj).then(success,error);
 		$http.post('https://api.worldtourism.io/tourcoins/dataOnDashboard',postObj).then(success,error);
 
 		function success(res){
-			console.log("res",res.data.data);
+			// console.log("res",res.data.data);
 			if (res.data.data) {
 				$scope.dashData = res.data.data;
 				if ($scope.dashData.userWallet.bitcoin.walletId == '') {
@@ -95,7 +95,7 @@ worldTourApp.controller('wtoDashboardCtrl', function($scope, $rootScope, $state,
 		$scope.fetchData();
 	}
 
-	console.log($scope.userData);
+	// console.log($scope.userData);
 
 	$scope.addWalletId = function(type,id){
 		if (id.length == 0 || id == null) {
@@ -115,7 +115,7 @@ worldTourApp.controller('wtoDashboardCtrl', function($scope, $rootScope, $state,
 			$http.post('https://api.worldtourism.io/tourcoins/saveWalletId',postObj).then(success,error);
 
 			function success(res){
-				console.log(res);
+				// console.log(res);
 				if (res.data.success) {
 					Materialize.toast('Wallet Id Added Successfully', 3000);
 				}
@@ -152,7 +152,7 @@ worldTourApp.controller('wtoDashboardCtrl', function($scope, $rootScope, $state,
 		$http.post('https://api.worldtourism.io/tourcoins/editWalletId',postObj).then(success,error);
 
 		function success(res){
-			console.log(res);
+			// console.log(res);
 			if (res.data.success) {
 				Materialize.toast('Wallet Id Updated Successfully', 3000);
 			}
@@ -198,7 +198,7 @@ worldTourApp.controller('wtoDashboardCtrl', function($scope, $rootScope, $state,
 		$http.get(url).then(success,error);
 
 		function success(res){
-			console.log(res);
+			// console.log(res);
 			$scope.transactionDetails = res.data.response;
 			$timeout(function(){
 				fetchTransactions();

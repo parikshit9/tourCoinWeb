@@ -20,6 +20,8 @@ worldTourApp.controller('wtoController', function($scope, $rootScope, $state, $t
 		// });
     });
 
+    // console.log(new Date().setHours(0,0,0,0), new Date('2017-11-30').setHours(0,0,0,0));
+
     $(document).ready(function(){
         $('.slick-car-1').slick({
             slidesToShow: 6,
@@ -135,7 +137,7 @@ worldTourApp.controller('wtoController', function($scope, $rootScope, $state, $t
 		$http.post('https://api.worldtourism.io/tourcoins/subscribeTourCoins',postObj).then(success,error);
 
 		function success(res){
-			console.log(res);
+			// console.log(res);
 			if (res.data.success) {
 				Materialize.toast('Email ID subscribed successfully', 3000);
 				$scope.mailId = null;
@@ -166,6 +168,8 @@ worldTourApp.controller('wtoController', function($scope, $rootScope, $state, $t
             document.getElementById('countdown').innerHTML = 'EXPIRED!';
 
             return;
+        }else if ($state.current.name != 'home') {
+            clearInterval(timer);
         }
         var days = Math.floor(distance / _day);
         var hours = Math.floor((distance % _day) / _hour);
@@ -191,7 +195,7 @@ worldTourApp.controller('wtoController', function($scope, $rootScope, $state, $t
     	$http.post('https://api.worldtourism.io/tourcoins/forgotPassword',postObj).then(success,error);
 
     	function success(res){
-    		console.log(res);
+    		// console.log(res);
     		if (res.data.success) {
     			Materialize.toast(res.data.success, 3000);
                 $rootScope.fm = angular.copy($scope.forgot.email);
@@ -202,13 +206,13 @@ worldTourApp.controller('wtoController', function($scope, $rootScope, $state, $t
     	}
 
     	function error(err){
-    		alert(err);
+    		console.log(err);
     	}
     }
 
-    if ($state.current.name == 'resetPassword') {
-    	console.log($stateParams.token);
-    }
+    // if ($state.current.name == 'resetPassword') {
+    // 	console.log($stateParams.token);
+    // }
 
     $scope.reset = {};
 
@@ -217,13 +221,13 @@ worldTourApp.controller('wtoController', function($scope, $rootScope, $state, $t
     	postObj.forgotPwdToken = $stateParams.token;
     	postObj.newPassword = $scope.reset.password;
 
-    	console.log(postObj);
+    	// console.log(postObj);
 
         // $http.post('http://api.worldtourism.io:8080/tourcoins/resetPassword',postObj).then(success,error);
         $http.post('https://api.worldtourism.io/tourcoins/resetPassword',postObj).then(success,error);
 
         function success(res){
-            console.log(res);
+            // console.log(res);
             if (res.data.success) {
                 Materialize.toast(res.data.success, 3000);
                 $state.go('passwordChanged');
@@ -233,7 +237,7 @@ worldTourApp.controller('wtoController', function($scope, $rootScope, $state, $t
         }
 
         function error(err){
-            alert(err);
+            console.log(err);
         }
     }
 
@@ -272,7 +276,7 @@ worldTourApp.controller('wtoController', function($scope, $rootScope, $state, $t
         $http.post('https://api.worldtourism.io/tourcoins/contactUs',postObj).then(success,error);
 
         function success(res){
-            console.log(res);
+            // console.log(res);
             if (res.data.success) {
                 Materialize.toast('Your Message has been successfully sent!', 3000);
                 $scope.contact = {};
