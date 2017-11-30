@@ -68,7 +68,17 @@
 				</span>
 			</span>
 		</div>
-		<div class="col s12 m3">
+		<div class="col s12 m3 presale-started" ng-if="showStarted">
+			<div class="wto-presell" style="padding-left: 20px;">
+				<span class="font-weight-500" style="color: #05e7e6">PRESALE</span>
+				<span class="font-weight-300"> STARTED</span>
+			</div>
+			<div class="topgap12" style="padding-left: 20px;">
+				<div class="font-weight-500 font-36 topgap12 cursor big-sub-label" style="letter-spacing: 0.2px;" ng-click="state.go('signup')">JOIN THE ICO</div>
+				<div class="topgap6 font-16 font-weight-500 cursor" ng-click="state.go('login')" style="color: #05e7e6">EXISTING USER LOGIN</div>
+			</div>
+		</div>
+		<div class="col s12 m3" ng-if="!showStarted">
 			<div class="wto-presell text-center">
 				<span class="font-weight-500">PRESALE</span>
 				<span class="font-weight-300"> STARTS</span>

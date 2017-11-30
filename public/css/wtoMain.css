@@ -1042,6 +1042,9 @@ input:focus{
 	border-color: aquamarine!important;
 	box-shadow: none!important;
 }
+.presale-started{
+	margin-top: 17%;
+}
 /*materiaze override*/
 #toast-container{
 	top: 0!important;
@@ -1201,6 +1204,9 @@ input:not([type]).invalid+label:after, input:not([type]):focus.invalid+label:aft
 	.counter-imgs img{
 		width: 28%;
 		height: auto;
+	}
+	.presale-started{
+		margin-top: 0;
 	}
 }
 
