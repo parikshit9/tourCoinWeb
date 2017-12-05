@@ -1,5 +1,15 @@
 worldTourApp.controller('wtoController', function($scope, $rootScope, $state, $timeout, $sce, $http, $window, $stateParams) {
 	$scope.state = $state;
+    wow = new WOW(
+    {
+        boxClass:     'wow',      // default
+        animateClass: 'animated', // change this if you are not using animate.css
+        offset:       0,          // default
+        mobile:       true,       // keep it on mobile
+        live:         true        // track if element updates
+      }
+    )
+   wow.init();
 	$(document).ready(function(){
 		$('.parallax').parallax();
 		$('.collapsible').collapsible();
@@ -18,6 +28,18 @@ worldTourApp.controller('wtoController', function($scope, $rootScope, $state, $t
 		// 	console.log('getting');
 		// 	$('.wto-fixed-nav').find('a[href="#'+$(this).attr('id')+'"]').parent().removeClass('active');
 		// });
+        var options = [
+            {selector: '#mainDistribution', offset: 50, callback: function(el) {
+                $scope.showMainDistribution = true;
+            } },
+            {selector: '#bonusLine', offset: 50, callback: function(el) {
+                $scope.showBonusLine = true;
+            } },
+            {selector: '#rewardsLine', offset: 50, callback: function(el) {
+                $scope.showRewardsLine = true;
+            } }
+        ];
+        Materialize.scrollFire(options);
     });
 
     // console.log(new Date().setHours(0,0,0,0), new Date('2017-11-30').setHours(0,0,0,0));
