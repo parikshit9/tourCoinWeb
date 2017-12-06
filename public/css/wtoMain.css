@@ -1055,10 +1055,14 @@ input:focus{
 	position: relative!important;
 	padding: 0 110px 0 15px!important;
 }
+.wallet-input:focus{
+	border-color: aquamarine!important;
+	box-shadow: none!important;
+}
 .send-wallet-btn{
 	position: absolute;
 	top: 28px;
-	right: 28px;
+	right: 8%;
 	width: 82px;
 	height: 26px;
 	border-radius: 99px;
@@ -1071,6 +1075,9 @@ input:focus{
 	align-items: center;
 	justify-content: center;
 	cursor: pointer;
+}
+.send-wallet-btn:hover{
+	background-color: #d8d3d3;
 }
 .log-icon{
 	font-size: 24px; 

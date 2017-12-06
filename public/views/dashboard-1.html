@@ -17,7 +17,7 @@
 								<span class="inline-block label-light-grey font-14 leftgap20">Current Price = $ 1.25</span>
 							</div>
 							<div class="col s12 m6" style="padding: 0;position: relative;">
-								<button class="btn-submit right" ng-if="!showLink" ng-click="refer()" style="margin-left: 0;transform: none;">INVITE A FRIEND</button>
+								<button class="btn-submit right" ng-if="!showLink" ng-click="refer()" style="margin-left: 0;transform: none;width:240px;height: 45px;">INVITE A FRIEND</button>
 								<div ng-if="showLink" class="font-12 label-light-grey" style="padding:0 30px;margin-bottom: 6px;">Your referral link</div>
 								<input type="text" ng-readonly="true" class="wallet-input width-override right" ng-if="showLink" ng-model="userData.userReferralLink" id="referLink" style="padding: 0 15px!important;">
 								<span class="send-wallet-btn" ng-click="copyRefer()" ng-if="showLink" style="top: 32px;right: 8px;">COPY</span>
@@ -27,7 +27,7 @@
 				</div>
 
 				<div class="col s12 m6" style="padding-right: 5px;">
-					<div class="dash-block-2 topgap10"  ng-if="!btcFlag">
+					<div class="dash-block-2 topgap10"  ng-if="!btcFlag" style="min-height: 332px;">
 						<div class="font-14 label-light-grey" style="padding: 0 10px 10px 10px;border-bottom: 1px solid #eaeaea;">
 							Bitcoin Funding
 						</div>
@@ -44,7 +44,7 @@
 						</div>
 					</div>
 
-					<div class="dash-block-2 topgap10" ng-if="btcFlag">
+					<div class="dash-block-2 topgap10" ng-if="btcFlag" style="min-height: 332px;">
 						<div class="font-14 label-light-grey" style="padding: 0 10px 10px 10px;border-bottom: 1px solid #eaeaea;">
 							Bitcoin Funding
 						</div>
@@ -53,7 +53,7 @@
 						</div>
 						<div class="relative">
 							<input type="text" name="wallet" class="wallet-input" ng-model="dashData.companyWallet.bitcoin.walletId" ng-readonly="true" id="btcId">
-							<span class="send-wallet-btn" ng-click="copyBtc()" style="top:8px;right: 8px;">COPY</span>
+							<span class="send-wallet-btn" ng-click="copyBtc()" style="top:8px;right: 4%;">COPY</span>
 						</div>
 					</div>
 
@@ -66,7 +66,7 @@
 					</div>
 
 					<div class="dash-block-2 topgap10 relative" ng-if="editBtcMode">
-						<input type="text" name="wallet" class="wallet-input" ng-model="edit.btcWallet">
+						<input type="text" name="wallet" class="wallet-input" ng-model="edit.btcWallet" autofocus>
 						<span class="send-wallet-btn"  ng-click="editWalletId('BITCOIN',edit.btcWallet)">UPDATE</span>
 
 						<div class="font-12 label-grey text-center">Please input the BITCOIN wallet address from<br/>where you will send your BTC</div>
@@ -74,7 +74,7 @@
 				</div>
 
 				<div class="col s12 m6" style="padding-left: 5px;">
-					<div class="dash-block-2 topgap10" ng-if="!ethFlag">
+					<div class="dash-block-2 topgap10" ng-if="!ethFlag" style="min-height: 332px;">
 						<div class="font-14 label-light-grey" style="padding: 0 10px 10px 10px;border-bottom: 1px solid #eaeaea;">
 							Ethereum Funding
 						</div>
@@ -91,7 +91,7 @@
 						</div>
 					</div>
 
-					<div class="dash-block-2 topgap10" ng-if="ethFlag">
+					<div class="dash-block-2 topgap10" ng-if="ethFlag" style="min-height: 332px;">
 						<div class="font-14 label-light-grey" style="padding: 0 10px 10px 10px;border-bottom: 1px solid #eaeaea;">
 							Ethereum Funding
 						</div>
@@ -100,7 +100,7 @@
 						</div>
 						<div class="relative">
 							<input type="text" name="wallet" class="wallet-input" ng-model="dashData.companyWallet.etherium.walletId" ng-readonly="true" id="ethId">
-							<span class="send-wallet-btn" ng-click="copyEth()" style="top:8px;right: 8px;">COPY</span>
+							<span class="send-wallet-btn" ng-click="copyEth()" style="top:8px;right: 4%;">COPY</span>
 						</div>
 					</div>
 
@@ -113,7 +113,7 @@
 					</div>
 
 					<div class="dash-block-2 topgap10 relative" ng-if="editEthMode">
-						<input type="text" name="wallet" class="wallet-input" ng-model="edit.ethWallet">
+						<input type="text" name="wallet" class="wallet-input" ng-model="edit.ethWallet" autofocus>
 						<span class="send-wallet-btn" ng-click="editWalletId('ETH',edit.ethWallet)">UPDATE</span>
 
 						<div class="font-12 label-grey text-center">Please input the BITCOIN wallet address from<br/>where you will send your BTC</div>
