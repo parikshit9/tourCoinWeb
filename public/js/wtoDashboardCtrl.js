@@ -65,7 +65,7 @@ worldTourApp.controller('wtoDashboardCtrl', function($scope, $rootScope, $state,
 		$http.post('https://api.worldtourism.io/tourcoins/dataOnDashboard',postObj).then(success,error);
 
 		function success(res){
-			// console.log("res",res.data.data);
+			console.log("res",res.data.data);
 			if (res.data.data) {
 				$scope.dashData = res.data.data;
 				if ($scope.dashData.userWallet.bitcoin.walletId == '') {
@@ -213,5 +213,10 @@ worldTourApp.controller('wtoDashboardCtrl', function($scope, $rootScope, $state,
 			console.log(err);
 		}
 	}
-	fetchTransactions();	
+	fetchTransactions();
+
+	$scope.tab = "dash";
+	$scope.tabChanger = function(name){
+		$scope.tab = name;
+	}
 });

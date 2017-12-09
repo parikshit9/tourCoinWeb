@@ -1103,6 +1103,15 @@ input:focus{
 .presale-started{
 	margin-top: 14em;
 }
+.dash-tab{
+	color: #4a4a4a;
+	font-size:14px;
+	cursor: pointer;
+	padding: 0 15px;
+}
+.dash-tab-active{
+	color: #0ebac5;
+}
 /*materiaze override*/
 #toast-container{
 	top: 0!important;
