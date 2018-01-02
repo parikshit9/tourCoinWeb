@@ -8,7 +8,7 @@
 					<span class="dash-tab {{tab == 'refer' ? 'dash-tab-active':''}}" ng-click="tabChanger('refer')">MY REFERRALS</span>
 				</div>
 				<div class="col s12 m6 text-right hide-on-small-only">
-					<a class="font-14 label-grey" target="_blank" href="https://s3.ap-south-1.amazonaws.com/tourcoin/invest.pdf">PROCESS TO INVEST</a>
+					<!-- <a class="font-14 label-grey" target="_blank" href="https://s3.ap-south-1.amazonaws.com/tourcoin/invest.pdf">PROCESS TO INVEST</a> -->
 				</div>
 			</div>
 			<div class="row" ng-if="tab == 'refer'">
@@ -61,7 +61,7 @@
 				</div>
 
 				<div class="col s12 m6" style="padding-right: 5px;">
-					<div class="dash-block-2 topgap10"  ng-if="!btcFlag" style="min-height: 332px;">
+					<!-- <div class="dash-block-2 topgap10"  ng-if="!btcFlag" style="min-height: 332px;">
 						<div class="font-14 label-light-grey" style="padding: 0 10px 10px 10px;border-bottom: 1px solid #eaeaea;">
 							Bitcoin Funding
 						</div>
@@ -89,7 +89,7 @@
 							<input type="text" name="wallet" class="wallet-input" ng-model="dashData.companyWallet.bitcoin.walletId" ng-readonly="true" id="btcId">
 							<span class="send-wallet-btn" ng-click="copyBtc()" style="top:8px;right: 4%;">COPY</span>
 						</div>
-					</div>
+					</div> -->
 
 					<div class="dash-block-2 topgap10 relative" ng-if="!editBtcMode">
 						<input type="text" name="wallet" class="wallet-input" ng-model="dashData.userWallet.bitcoin.walletId"  ng-disabled="btcFlag">
@@ -108,7 +108,7 @@
 				</div>
 
 				<div class="col s12 m6" style="padding-left: 5px;">
-					<div class="dash-block-2 topgap10" ng-if="!ethFlag" style="min-height: 332px;">
+					<!-- <div class="dash-block-2 topgap10" ng-if="!ethFlag" style="min-height: 332px;">
 						<div class="font-14 label-light-grey" style="padding: 0 10px 10px 10px;border-bottom: 1px solid #eaeaea;">
 							Ethereum Funding
 						</div>
@@ -136,7 +136,7 @@
 							<input type="text" name="wallet" class="wallet-input" ng-model="dashData.companyWallet.etherium.walletId" ng-readonly="true" id="ethId">
 							<span class="send-wallet-btn" ng-click="copyEth()" style="top:8px;right: 4%;">COPY</span>
 						</div>
-					</div>
+					</div> -->
 
 					<div class="dash-block-2 topgap10 relative" ng-if="!editEthMode">
 						<input type="text" name="wallet" class="wallet-input" ng-model="dashData.userWallet.eherium.walletId" ng-disabled="ethFlag">
@@ -154,7 +154,7 @@
 					</div>
 				</div>
 
-				<div class="col s12 m12">
+				<!-- <div class="col s12 m12">
 					<div class="dash-block-2 topgap10">
 						<div class="font-14 label-light-grey" style="padding: 0 10px 10px 10px;border-bottom: 1px solid #eaeaea;">
 							Current Bonus 25% (1 TOURCOIN = $1.75)
@@ -206,7 +206,7 @@
 							<div class="col s2 m2 font-14 label-grey">{{data.currencyTransferredToCompany}} {{data.ethereumWalletId == '' ? 'BTC' : 'ETH'}}</div>
 						</div>
 					</div>
-				</div>
+				</div> -->
 			</div>
 		</div>
 		<div class="col s2 m1 hide-on-small-only">&nbsp;</div>
