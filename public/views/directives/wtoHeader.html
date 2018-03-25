@@ -43,13 +43,13 @@
 						<a class="wto-anchor {{boolChangeClass?'':'border-none'}}" ui-sref="home">CLIENTELE</a>
 					</li>
 
-					<li>
+					<!-- <li>
 						<a href="" target="_blank" class="wto-anchor {{boolChangeClass?'':'border-none'}}">WHITEPAPER</a>
-					</li>
+					</li> -->
 
-					<li>
+					<!-- <li>
 						<a class="wto-anchor {{boolChangeClass?'':'border-none'}} {{state.current.name == 'faq' ? 'anchor-active':''}}" ui-sref="faq">FAQs</a>
-					</li>
+					</li> -->
 
 					<li ng-if="state.current.name == 'dashboard' || state.current.name == 'dashboard_1'"><a class="dropdown-button wto-anchor" style="border-bottom:none!important" href="#!" data-activates="dropdown1">MY ACCOUNT<i class="material-icons log-icon right">arrow_drop_down</i></a></li>
 				</ul>
@@ -69,8 +69,8 @@
 
 					<li><a ui-sref="vision">Vision</a></li>
 					<li><a ui-sref="vision">Crew</a></li>
-					<li><a ui-sref="faq">FAQs</a></li>
-					<li><a href="" target="_blank">WHITEPAPER</a></li>
+					<!-- <li><a ui-sref="faq">FAQs</a></li> -->
+					<!-- <li><a href="" target="_blank">WHITEPAPER</a></li> -->
 					<li ng-if="state.current.name == 'dashboard'"><a href="#!" ng-click="logout()">Logout</a></li>
 				</ul>
 
