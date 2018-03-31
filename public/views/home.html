@@ -1,20 +1,44 @@
 <div class="wto-container">
-	<div class="hide-on-small-only" style="width: 500px;height: auto;position: fixed;bottom: 0;right: 0;z-index: 998;cursor: pointer;" ng-click="state.go('signup')" ng-if="showAd">
+	<!-- <div class="hide-on-small-only" style="width: 500px;height: auto;position: fixed;bottom: 0;right: 0;z-index: 998;cursor: pointer;" ng-click="state.go('signup')" ng-if="showAd">
 		<div style="position: relative;">
 			<img src="/img/ad.png" style="width: 100%;height:auto;">
 			<span style="width: 40px;height: 40px;background-color: #f5f5f5;position: absolute;top: 0;right: 0;z-index: 999;display: flex;justify-content: center;align-items: center;" ng-click="closeAd()">
 				<img src="/img/close.svg" style="width: 15px;">
 			</span>
 		</div>
-	</div>
-	<div class="row">
-		<div class="background-xs show-on-small"></div>
-		<video class="hide-on-small-only" poster="/img/ny.jpg" id="bgvid" playsinline autoplay muted loop>
+	</div> -->
+	<div class="row wto-home-bg" style="margin-bottom: 0;">
+		<div class="background-new"></div>
+		<!-- <video class="hide-on-small-only" poster="/img/ny.jpg" id="bgvid" playsinline autoplay muted loop>
 			<source src="/img/ny.webm" type="video/webm">
-			<!-- <source src="ny.mp4" type="video/mp4"> -->
-		</video>
+		</video> -->
+		<div class="col s12">
+			<div class="topgap40">
+				<img src="/img/fifa/LOGO.png" width="250" style="margin-left: 60px;">
+			</div>
+		</div>
 		<div class="col s1 m1 hide-on-small-only">&nbsp;</div>
-		<div class="col s12 m7 wto-home-bg relative">
+
+		<div class="col s12 m4">
+			<div class="left-text-container">
+				<img src="/img/fifa/left_text.png">
+			</div>
+		</div>
+
+		<div class="col s2 m2 hide-on-small-only text-center">
+			<div class="topgap30">
+				<img src="/img/fifa/FIFA_World_Cup.png">
+			</div>
+		</div>
+
+		<div class="col s4 m4 hide-on-small-only text-center">
+			<div class="topgap50">
+				<img src="/img/fifa/Quote.png">
+			</div>
+		</div>
+
+		<div class="col s1 m1 hide-on-small-only">&nbsp;</div>
+		<!-- <div class="col s12 m7 wto-home-bg relative">
 			<img src="/img/home-semi.png" class="hide-on-small-only" style="position: absolute;top: 0;left:-14%;">
 			<div class="text-center block-1-margin">
 				<span class="wto-home-span">WORLD</span>
@@ -23,21 +47,21 @@
 			</div>
 			<div class="text-center wto-journey-text topgap20">- LET THE JOURNEY BEGIN -</div>
 			<div class="text-center relative topgap15">
-				<!-- <img src="/img/frame.png" class="wto-frame"> -->
+				<img src="/img/frame.png" class="wto-frame">
 				<span class="wto-frame-text">
 					<div>World's first decentralized currency dedicated</div>
 					<div>
 						<span>to </span>
 						<span class="font-weight-500">$25 trillion</span>
 						<span> tourism market.</span>
-						<!-- <span class="font-weight-400">ERC 20</span>
-						<span> smart contract.</span> -->
+						<span class="font-weight-400">ERC 20</span>
+						<span> smart contract.</span>
 					</div>
 				</span>
 			</div>
 
 			<span class="wto-pricing hide-on-small-only">
-				<!-- <span class="inline-block text-center" style="vertical-align: bottom;">
+				<span class="inline-block text-center" style="vertical-align: bottom;">
 					<span class="inline-block font-weight-500 font-12 label-white text-center" style="width:90px;vertical-align: sub;">1 TOURCOIN = </span><br/>
 					<span class="inline-block font-12 text-center" style="">&nbsp;</span>
 				</span>
@@ -65,7 +89,7 @@
 				<span class="inline-block text-center" style="margin: 0 6px;">
 					<span class="inline-block font-weight-500 font-12 label-white text-center" style="padding: 6px 0;border-bottom : 2px solid #05e7e6;width:70px;"> $ 2.50</span><br/>
 					<span class="inline-block font-12 text-center" style="padding: 6px 0;color: rgba(255,255,255,0.7)">LOT 4</span>
-				</span> -->
+				</span>
 
 				<span class="inline-block text-left" style="margin: 0 12px;">
 					<span class="number-million">100</span>
@@ -91,16 +115,16 @@
 					</span>
 				</span>
 			</span>
-		</div>
-		<div class="col s12 m3 presale-started" ng-if="showStarted">
+		</div> -->
+		<!-- <div class="col s12 m3 presale-started" ng-if="showStarted">
 			<div class="wto-presell" style="padding-left: 20px;">
-				<!-- <span class="font-weight-500" style="color: #05e7e6">PRESALE</span>
-				<span class="font-weight-300"> STARTED</span> -->
+				<span class="font-weight-500" style="color: #05e7e6">PRESALE</span>
+				<span class="font-weight-300"> STARTED</span>
 				<span class="font-weight-500" style="color: #05e7e6">&nbsp;</span>
 				<span class="font-weight-300"> &nbsp;</span>
 			</div>
 			<div class="topgap12" style="padding-left: 20px;">
-				<!-- <div class="font-weight-500 font-36 topgap12 cursor big-sub-label" style="letter-spacing: 0.2px;" ng-click="state.go('signup')">JOIN THE ICO</div> -->
+				<div class="font-weight-500 font-36 topgap12 cursor big-sub-label" style="letter-spacing: 0.2px;" ng-click="state.go('signup')">JOIN THE ICO</div>
 				<div class="topgap30 font-16 font-weight-500 cursor" ng-click="state.go('login')" style="color: #05e7e6">EXISTING USER LOGIN</div>
 			</div>
 		</div>
@@ -140,18 +164,18 @@
 					<span class="inline-block relative">
 						<input type="email" id="sub" ng-model="mailId" ng-change="validateEmail(mailId)" placeholder="Enter Email Address" class="main-home-mail">
 						<img src="/img/email.svg" class="mail-icon" style="left:0;">
-						<!-- <span class="mail-subscribe" ng-click="subscribeMail(mailId)">SUBSCRIBE</span> -->
-						<!-- <label data-error="Invalid Email" class="active font-10" style="font-size: 10px;top:10px;" for="sub"></label> -->
+						<span class="mail-subscribe" ng-click="subscribeMail(mailId)">SUBSCRIBE</span>
+						<label data-error="Invalid Email" class="active font-10" style="font-size: 10px;top:10px;" for="sub"></label>
 						<div class="font-10" style="color: red;margin-top: 4px;">{{errmsg}}</div>
 					</span>
 				</div>
 				<div class="text-right font-weight-500 font-45 topgap12 cursor big-sub-label hide-on-small-only" style="letter-spacing: 0.2px;" ng-click="subscribeMail(mailId)">SUBSCRIBE</div>
 			</div>
 		</div>
-		<div class="col s1 m1 hide-on-small-only">&nbsp;</div>
+		<div class="col s1 m1 hide-on-small-only">&nbsp;</div> -->
 	</div>
 
-	<!-- <div class="row wto-white-bg">
+	<div class="row wto-white-bg fifa-bg">
 		<div class="col s1">&nbsp;</div>
 		<div class="col s10 topgap40 section scrollspy wow fadeIn" id="about">
 			<h5 class="text-center font-27" style="margin-top: 20px;">
@@ -159,18 +183,19 @@
 				<span class="font-weight-100"> US</span>
 			</h5>
 			<div class="font-14 text-center topgap20 bottomgap40" style="color: #7f848b">
-				World Tourism is a one-of-its-kind tourism community comprising a diverse group of adroit individuals with varied skill sets including digital mining, tourism, legal and decentralized pundits, who have come together to realize a vision shared by 30 members of the World Tourism Crew and 350 tour agencies worldwide. All passionately devoted to collaboration and development of the tourism and cryptocurrency ecosystem and community. We believe that there must be an end to major tour agencies’ monopoly on tourism sector, and a fundamental restructuring of our tourism community and ecosystem to ensure that the discrepancies faced by tourists in travel costs across different countries can be addressed thoroughly.
+				A Tourism Community - with diverse group of adroit individuals and skill sets, including digital mining, tourism, legal and decentralized pundits. uniting to realize a vision shared by 25 members of the World Tourism Crew and 350 tour agencies world wide. All passionately devoted to collaboration and the development of the tourism and cryptocurrency ecosystem and community.There must be an end to major tour agencies monopoly on tourism sector ,and a fundamental restructuring of our tourism community and ecosystem to ensure that inequality of tourists are addressed thoroughly.
 			</div>
+			<div class="topgap20">&nbsp;</div>
 		</div>
 		<div class="col s1">&nbsp;</div>
-	</div> -->
+	</div>
 
-	<div class="row">
+	<div class="row" style="margin-bottom: 0;">
 		<div class="col s12 parallax-container">
 			<div class="parallax"><img src="img/banner.jpg"></div>
 			<div class="wto-coming-soon topgap35">&nbsp;</div>
-			<div class="text-center topgap35">
-				<a href="" target="_blank" class="download-whitepaper wow fadeInLeft">
+			<div class="text-center topgap35 bottomgap20">
+				<!-- <a href="" target="_blank" class="download-whitepaper wow fadeInLeft">
 					<img class="middle" src="/img/download-whitepaper.svg">
 					<span class="inline-block leftgap20 middle">DOWNLOAD WHITEPAPER</span>
 				</a>
@@ -179,9 +204,126 @@
 					<span class="ico-arrow">
 						<img class="middle" src="/img/arrow.svg">
 					</span>
+				</div> -->
+				<div class="join-ico cursor wow fadeInLeft" ng-click="state.go('login')" style="background-color: transparent;border: solid 1px #ffffff;">
+					<span class="inline-block leftgap20 middle">EXISTING USER LOGIN</span>
+					<span class="ico-arrow" style="background-color: transparent;border: solid 1px #ffffff;">
+						<img class="middle" src="/img/arrow.svg">
+					</span>
 				</div>
+
+				<a ui-sref="signup" class="download-whitepaper wow fadeInRight" style="background-color: #e4c484;border-color: #e4c484;">
+					<span class="inline-block leftgap20 middle">SIGN UP</span>
+				</a>
 			</div>
 		</div>
+	</div>
+
+	<div class="row wto-white-bg fifa-bg">
+		<div class="col s1">&nbsp;</div>
+		<div class="col s10 topgap40 section scrollspy wow fadeIn" id="about">
+			<h5 class="text-center font-27" style="margin-top: 20px;">
+				<span class="font-weight-600">The 2018 World Cup Russia Experience</span>
+				<!-- <span class="font-weight-100"> US</span> -->
+			</h5>
+			<div class="font-14 text-center topgap20 bottomgap40" style="color: #7f848b">
+				<div class="text-center">The time is upon us yet again! The world’s most prestigious and highly anticipated international soccer/football competition is</div>
+
+				<div class="text-center">back. Every four years the world is riveted – make this the year that you see it first hand for yourself. The World Cup 2018 is set</div>
+
+				<div class="text-center">for this summer in 11 cities throughout Russia – the planet’s geographically largest country. Take advantage of this incredible</div>
+
+				<div class="text-center">opportunity to follow your favourite teams and visit one of the most unique countries in Europe.</div>
+			</div>
+			<div class="topgap20">&nbsp;</div>
+
+			<div class="row topgap40">
+				<div class="col s12 m6 relative">
+					<img src="/img/fifa/graphic.png" style="position: absolute;left: -24%;top: 0;">
+				</div>
+				<div class="col s12 m6">
+					<div class="font-24">All World Cup 2018 Packages will Include:</div>
+					<div class="topgap20 font-15">
+						<div>•&nbsp;&nbsp;&nbsp;&nbsp;3 or 4-star hotel accommodations</div>
+						<div>•&nbsp;&nbsp;&nbsp;&nbsp;Full breakfast daily</div>						
+						<div>•&nbsp;&nbsp;&nbsp;&nbsp;Airport round-trip transfers</div>
+						<div>•&nbsp;&nbsp;&nbsp;&nbsp;Welcome dinner &amp; happy hours</div>
+						<div>•&nbsp;&nbsp;&nbsp;&nbsp;Russian city tours</div>
+						<div>•&nbsp;&nbsp;&nbsp;&nbsp;Daily onsite hosts and local assistance</div>
+						<div>•&nbsp;&nbsp;&nbsp;&nbsp;English to Russian translation</div>
+						<div>•&nbsp;&nbsp;&nbsp;&nbsp;Pre-trip planning assistance</div>
+						<div>•&nbsp;&nbsp;&nbsp;&nbsp;Commemorative welcome package</div>
+						<div>•&nbsp;&nbsp;&nbsp;&nbsp;You fly there, we take care of the rest!</div>
+					</div>
+				</div>
+			</div>
+			<div class="topgap60">&nbsp;</div>
+			<div class="topgap60">&nbsp;</div>
+			<div class="row">
+				<div class="col s12 m12">
+					<div class="font-24 text-center">Russia World Cup 2018 Packages</div>
+				</div>
+			</div>
+			<div class="row topgap40">
+				<div class="col s4 m4">
+					<div class="package-container">
+						<div class="font-18 font-weight-600">Follow Team 1</div>
+						<div class="font-12 topgap20">Match (5 Nights)    Moscow</div>
+						<div class="font-12">Packages Starting from $5,825.00</div>
+						<div class="package-separator">&nbsp;</div>
+						<div class="font-12 font-weight-600" style="letter-spacing: 2px;">VIEW PACKAGES</div>
+					</div>
+				</div>
+
+				<div class="col s4 m4">
+					<div class="package-container">
+						<div class="font-18 font-weight-600">Follow Team 2</div>
+						<div class="font-12 topgap20">Match (5 Nights)    St. Petersburg</div>
+						<div class="font-12">Packages Starting from $5,825.00</div>
+						<div class="package-separator">&nbsp;</div>
+						<div class="font-12 font-weight-600" style="letter-spacing: 2px;">VIEW PACKAGES</div>
+					</div>
+				</div>
+
+				<div class="col s4 m4">
+					<div class="package-container">
+						<div class="font-18 font-weight-600">Follow Team 3</div>
+						<div class="font-12 topgap20">Match (5 Nights)    Moscow</div>
+						<div class="font-12">Packages Starting from $5,825.00</div>
+						<div class="package-separator">&nbsp;</div>
+						<div class="font-12 font-weight-600" style="letter-spacing: 2px;">VIEW PACKAGES</div>
+					</div>
+				</div>
+			</div>
+
+			<div class="row topgap40">
+				<div class="col s2 m2">&nbsp;</div>
+
+				<div class="col s4 m4">
+					<div class="package-container">
+						<div class="font-18 font-weight-600">Follow Team 4</div>
+						<div class="font-12 topgap20">Match (5 Nights)    Sochi</div>
+						<div class="font-12">Packages Starting from $5,825.00</div>
+						<div class="package-separator">&nbsp;</div>
+						<div class="font-12 font-weight-600" style="letter-spacing: 2px;">VIEW PACKAGES</div>
+					</div>
+				</div>
+
+				<div class="col s4 m4">
+					<div class="package-container">
+						<div class="font-18 font-weight-600">Follow Team 5</div>
+						<div class="font-12 topgap20">Match (5 Nights)    Ekaterinburg</div>
+						<div class="font-12">Packages Starting from $5,825.00</div>
+						<div class="package-separator">&nbsp;</div>
+						<div class="font-12 font-weight-600" style="letter-spacing: 2px;">VIEW PACKAGES</div>
+					</div>
+				</div>
+
+				<div class="col s2 m2">&nbsp;</div>
+			</div>
+			<div class="topgap60">&nbsp;</div>
+		</div>
+		<div class="col s1">&nbsp;</div>
 	</div>
 
 	<!-- <div class="row wto-white-bg">

@@ -484,7 +484,7 @@ input:focus{
 	letter-spacing: 2.4px;
 	padding: 12px 35px;
 	text-align: center;
-	margin-right: 20px;
+	margin-left: 20px;
 }
 .join-ico{
 	display: inline-block;
@@ -500,7 +500,7 @@ input:focus{
 	text-align: left;
 	vertical-align: middle;
 	position: relative;
-	margin-left: 20px;
+	margin-right: 20px;
 }
 .ico-arrow{
 	width: 50px;
@@ -1133,6 +1133,43 @@ input:focus{
 input:not([type]).invalid+label:after, input:not([type]):focus.invalid+label:after, input[type=text]:not(.browser-default).invalid+label:after, input[type=text]:not(.browser-default):focus.invalid+label:after, input[type=password]:not(.browser-default).invalid+label:after, input[type=password]:not(.browser-default):focus.invalid+label:after, input[type=email]:not(.browser-default).invalid+label:after, input[type=email]:not(.browser-default):focus.invalid+label:after, input[type=url]:not(.browser-default).invalid+label:after, input[type=url]:not(.browser-default):focus.invalid+label:after, input[type=time]:not(.browser-default).invalid+label:after, input[type=time]:not(.browser-default):focus.invalid+label:after, input[type=date]:not(.browser-default).invalid+label:after, input[type=date]:not(.browser-default):focus.invalid+label:after, input[type=datetime]:not(.browser-default).invalid+label:after, input[type=datetime]:not(.browser-default):focus.invalid+label:after, input[type=datetime-local]:not(.browser-default).invalid+label:after, input[type=datetime-local]:not(.browser-default):focus.invalid+label:after, input[type=tel]:not(.browser-default).invalid+label:after, input[type=tel]:not(.browser-default):focus.invalid+label:after, input[type=number]:not(.browser-default).invalid+label:after, input[type=number]:not(.browser-default):focus.invalid+label:after, input[type=search]:not(.browser-default).invalid+label:after, input[type=search]:not(.browser-default):focus.invalid+label:after, textarea.materialize-textarea.invalid+label:after, textarea.materialize-textarea:focus.invalid+label:after, .select-wrapper.invalid+label:after{
     transform: translateY(20px)!important;
 }
+
+/*FIFA*/
+.left-text-container{
+	margin-top: 120px;
+}
+.background-new{
+	position: absolute;
+	top: 50%;
+	left: 50%;
+	min-width: 100%;
+	min-height: 100%;
+	z-index: -100;
+	transform: translateX(-50%) translateY(-50%);
+	background-image: url('/img/fifa/bg.jpg');
+	background-size: cover;
+	height: 100vh;
+	width: 100%;
+	background-repeat: no-repeat;
+}
+.fifa-bg{
+	background-image: url('/img/fifa/GOLD.jpg');
+	background-size: cover;
+	margin-bottom: 0;
+}
+.package-container{
+	border-radius: 5px;
+	background-color: #a21d21;
+	padding: 15px 25px;
+	color: #ffffff;
+}
+.package-separator{
+	opacity: 0.3;
+	background-color: #ffffff;
+	height: 1px;
+	/*width: 100%;*/
+	margin: 30px -25px 15px -25px;
+}
 /*(for small screen size less then 480px)*/
 @media only screen and (max-width: 480px){
 	.wto-home-span{
@@ -1185,11 +1222,12 @@ input:not([type]).invalid+label:after, input:not([type]):focus.invalid+label:aft
 		width: 200px!important;
 	}
 	.join-ico{
-		margin-left: 0px;
-		margin-top: 20px;
+		margin-right: 0px;
+		/*margin-top: 20px;*/
 	}
 	.download-whitepaper{
-		margin-right: 0px;
+		margin-left: 0px;
+		margin-right: 20px;
 	}
 	.parallax-container{
 		height: 240px;

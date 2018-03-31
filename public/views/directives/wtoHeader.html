@@ -11,30 +11,30 @@
 						<a class="wto-anchor {{boolChangeClass?'':'border-none'}}" ui-sref="home">HOME</a>
 					</li>
 
-					<li ng-if="state.current.name == 'vision'">
+					<!-- <li ng-if="state.current.name == 'vision'">
 						<a class="wto-anchor {{boolChangeClass?'':'border-none'}}" href="#crew">CREW</a>
 					</li>
 					<li ng-if="state.current.name != 'vision'">
 						<a class="wto-anchor {{boolChangeClass?'':'border-none'}}" ui-sref="vision">CREW</a>
-					</li>
+					</li> -->
 
 					<li>
 						<a class="wto-anchor {{boolChangeClass?'':'border-none'}} {{state.current.name == 'vision' ? 'anchor-active':''}}" ui-sref="vision">VISION</a>
 					</li>
 
-					<li ng-if="state.current.name == 'home'">
+					<!-- <li ng-if="state.current.name == 'home'">
 						<a class="wto-anchor {{boolChangeClass?'':'border-none'}}" href="#rewards">REWARDS</a>
 					</li>
 					<li ng-if="state.current.name != 'home'">
 						<a class="wto-anchor {{boolChangeClass?'':'border-none'}}" ui-sref="home">REWARDS</a>
-					</li>
+					</li> -->
 
-					<li ng-if="state.current.name == 'home'">
+					<!-- <li ng-if="state.current.name == 'home'">
 						<a class="wto-anchor {{boolChangeClass?'':'border-none'}}" href="#road-map">ROAD MAP</a>
 					</li>
 					<li ng-if="state.current.name != 'home'">
 						<a class="wto-anchor {{boolChangeClass?'':'border-none'}}" ui-sref="home">ROAD MAP</a>
-					</li>
+					</li> -->
 
 					<li ng-if="state.current.name == 'home'">
 						<a class="wto-anchor {{boolChangeClass?'':'border-none'}}" href="#client">CLIENTELE</a>
@@ -56,15 +56,15 @@
 
 				<ul class="side-nav" id="mobile-nav">
 					<li ng-if="state.current.name == 'home'"><a href="#about">About Us</a></li>
-					<li ng-if="state.current.name == 'home'"><a href="#road-map">Road Map</a></li>
+					<!-- <li ng-if="state.current.name == 'home'"><a href="#road-map">Road Map</a></li>
 					<li ng-if="state.current.name == 'vision'"><a href="#crew">Crew</a></li>
-					<li ng-if="state.current.name == 'home'"><a href="#rewards">Rewards</a></li>
+					<li ng-if="state.current.name == 'home'"><a href="#rewards">Rewards</a></li> -->
 					<li ng-if="state.current.name == 'home'"><a href="#client">Clientele</a></li>
 
 					<li ng-if="state.current.name != 'home'"><a ui-sref="home">About Us</a></li>
-					<li ng-if="state.current.name != 'home'"><a ui-sref="home">Road Map</a></li>
+					<!-- <li ng-if="state.current.name != 'home'"><a ui-sref="home">Road Map</a></li>
 					<li ng-if="state.current.name != 'vision'"><a ui-sref="Vision">Crew</a></li>
-					<li ng-if="state.current.name != 'home'"><a ui-sref="home">Rewards</a></li>
+					<li ng-if="state.current.name != 'home'"><a ui-sref="home">Rewards</a></li> -->
 					<li ng-if="state.current.name != 'home'"><a ui-sref="home">Clientele</a></li>
 
 					<li><a ui-sref="vision">Vision</a></li>
